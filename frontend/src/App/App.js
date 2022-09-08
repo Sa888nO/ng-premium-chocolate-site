@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import Header from "../components/Header";
+
 function App() {
   return (
     <BrowserRouter>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<div>main</div>} />
         <Route path="/shop" element={<div>shop</div>} />

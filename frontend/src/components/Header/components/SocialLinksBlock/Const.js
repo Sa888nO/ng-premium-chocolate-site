@@ -5,8 +5,8 @@ export const SVG = {
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      width="20px"
-      height="20px"
+      width="30px"
+      height="30px"
       viewBox="0 0 60 60"
     >
       <desc>Telegram</desc>
@@ -20,8 +20,8 @@ export const SVG = {
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
-      width="20px"
-      height="20px"
+      width="30px"
+      height="30px"
       viewBox="0 0 30 30"
     >
       <desc>Instagram</desc>
@@ -38,8 +38,8 @@ export const SVG = {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="20px"
-      height="20px"
+      width="30px"
+      height="30px"
       viewBox="0 0 99 99"
       enable-background="new 0 0 99 99"
     >
@@ -59,8 +59,8 @@ export const SVG = {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="20px"
-      height="20px"
+      width="30px"
+      height="30px"
       viewBox="0 0 48 48"
       enable-background="new 0 0 20 20"
     >

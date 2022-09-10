@@ -44,6 +44,7 @@ textarea {
 }
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 img,
 embed,
@@ -65,4 +66,8 @@ td,
 th {
   padding: 0;
   text-align: left;
+}
+a {
+  text-decoration: none;
+  color: black;
 }

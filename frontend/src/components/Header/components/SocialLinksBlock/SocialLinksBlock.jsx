@@ -1,7 +1,7 @@
 import SocialLink from "@components/SocialLink";
 import classNames from "classnames";
 
-import { SVG, HREF } from "./Const";
+import { SVG, HREF } from "./const";
 import styles from "./SocialLinksBlock.module.scss";
 
 const SocialLinksBlock = () => {

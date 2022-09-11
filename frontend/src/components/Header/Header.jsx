@@ -1,15 +1,14 @@
-/* eslint-disable no-console */
 import { useState } from "react";
 
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import SocialLinksBlock from "./components/SocialLinksBlock";
 import styles from "./Header.module.scss";
 
-const Header = (activPage) => {
+const Header = () => {
   const [isOpen, setOpen] = useState(false);
-
+  const location = useLocation();
   return (
     <div>
       <div className={classNames(styles["button-block"])}>
@@ -37,12 +36,54 @@ const Header = (activPage) => {
           <span>hello@ng.com</span>
         </div>
         <div className={classNames(styles.block_link)}>
-          <Link to={"/shop"}>Каталог</Link>
-          <Link to={"/corporate-orders"}>Корпоративные заказы</Link>
-          <Link to={"/delivery-and-payment"}>Доставка и оплата</Link>
-          <Link to={"/about-author"}>Об авторе</Link>
-          <Link to={"/composition-and-storage"}>Хранение</Link>
-          <Link to={"/contacts"}>Контакты</Link>
+          <Link
+            to={"/shop"}
+            className={classNames({
+              [styles.active]: location.pathname === "/shop",
+            })}
+          >
+            Каталог
+          </Link>
+          <Link
+            to={"/corporate-orders"}
+            className={classNames({
+              [styles.active]: location.pathname === "/corporate-orders",
+            })}
+          >
+            Корпоративные заказы
+          </Link>
+          <Link
+            to={"/delivery-and-payment"}
+            className={classNames({
+              [styles.active]: location.pathname === "/delivery-and-payment",
+            })}
+          >
+            Доставка и оплата
+          </Link>
+          <Link
+            to={"/about-author"}
+            className={classNames({
+              [styles.active]: location.pathname === "/about-author",
+            })}
+          >
+            Об авторе
+          </Link>
+          <Link
+            to={"/composition-and-storage"}
+            className={classNames({
+              [styles.active]: location.pathname === "/composition-and-storage",
+            })}
+          >
+            Хранение
+          </Link>
+          <Link
+            to={"/contacts"}
+            className={classNames({
+              [styles.active]: location.pathname === "/contacts",
+            })}
+          >
+            Контакты
+          </Link>
         </div>
         <div className={classNames(styles["hidden-block"])}>
           <SocialLinksBlock />

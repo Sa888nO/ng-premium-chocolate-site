@@ -13,7 +13,10 @@ function App() {
         <Content>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/shop" element={<div>shop</div>} />
+            <Route
+              path="/shop"
+              element={<div>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</div>}
+            />
             <Route
               path="/corporate-orders"
               element={<div>corporate-orders</div>}

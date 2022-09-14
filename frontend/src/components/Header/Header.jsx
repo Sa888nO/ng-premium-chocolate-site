@@ -10,7 +10,7 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const location = useLocation();
   return (
-    <div>
+    <header>
       <div className={classNames(styles["button-block"])}>
         <button
           className={classNames(
@@ -25,7 +25,7 @@ const Header = () => {
           <span></span>
         </button>
       </div>
-      <div className={classNames(styles.header, { [styles.a]: !isOpen })}>
+      <nav className={classNames(styles.header, { [styles.a]: !isOpen })}>
         <div className={classNames(styles.block_title)}>
           <div>
             <SocialLinksBlock />
@@ -89,8 +89,8 @@ const Header = () => {
           <SocialLinksBlock />
           <span>hello@ng.com</span>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 

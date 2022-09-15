@@ -31,7 +31,7 @@ const Header = () => {
             <SocialLinksBlock />
           </div>
           <h1>
-            <Link to={"/"}>Monomo</Link>
+            <Link to={"/"}>NG</Link>
           </h1>
           <span>hello@ng.com</span>
         </div>

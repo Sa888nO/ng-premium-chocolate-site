@@ -155,12 +155,12 @@
 }
 
 .c-hamburger--htx span {
-  transition: background 0s 0.3s;
+  transition: background 0s 0.1s;
 }
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+  transition-duration: 0.1s, 0.1s;
+  transition-delay: 0.1s, 0s;
 }
 .c-hamburger--htx span::before {
   transition-property: top, transform;
@@ -183,7 +183,7 @@
 }
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
-  transition-delay: 0s, 0.4s;
+  transition-delay: 0.1s, 0.1s;
 }
 
 .active {

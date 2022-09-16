@@ -1,0 +1,23 @@
+.header-link-block {
+  height: min-content;
+  display: flex;
+  gap: 6px;
+  height: 30px;
+  a {
+    height: 30px;
+    display: inline-block;
+  }
+}
+
+.footer-link-block {
+  height: min-content;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 40px;
+
+  a {
+    height: 40px;
+    display: inline-block;
+  }
+}

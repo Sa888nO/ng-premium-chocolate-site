@@ -1,12 +1,23 @@
 import SocialLink from "@components/SocialLink";
 import classNames from "classnames";
 
-import { SVG, HREF } from "./const";
+import { headerSVG, footerSVG, HREF } from "./const";
 import styles from "./SocialLinksBlock.module.scss";
 
-const SocialLinksBlock = () => {
+const SocialLinksBlock = ({ type }) => {
+  let SVG;
+  type === "header" ? (SVG = headerSVG) : (SVG = footerSVG);
   return (
-    <div className={classNames(styles["social-link-block"])}>
+    <div
+      className={classNames(
+        {
+          [styles["header-link-block"]]: type === "header",
+        },
+        {
+          [styles["footer-link-block"]]: type === "footer",
+        }
+      )}
+    >
       <SocialLink href={HREF.instagram} svg={SVG.instagram} />
       <SocialLink href={HREF.telegram} svg={SVG.telegram} />
       <SocialLink href={HREF.youtube} svg={SVG.youtube} />

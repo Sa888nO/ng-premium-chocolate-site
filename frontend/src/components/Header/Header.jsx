@@ -1,9 +1,9 @@
 import { useState } from "react";
 
+import SocialLinksBlock from "@components/SocialLinksBlock";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 
-import SocialLinksBlock from "./components/SocialLinksBlock";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
       <nav className={classNames(styles.header, { [styles.a]: !isOpen })}>
         <div className={classNames(styles.block_title)}>
           <div>
-            <SocialLinksBlock />
+            <SocialLinksBlock type="header" />
           </div>
           <h1>
             <Link to={"/"}>NG</Link>
@@ -86,7 +86,7 @@ const Header = () => {
           </Link>
         </div>
         <div className={classNames(styles["hidden-block"])}>
-          <SocialLinksBlock />
+          <SocialLinksBlock type="header" />
           <span>hello@ng.com</span>
         </div>
       </nav>

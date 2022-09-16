@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Wrapper>
-        <Header />
         <Content>
+          <Header />
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route

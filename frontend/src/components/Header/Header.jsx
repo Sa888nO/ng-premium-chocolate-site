@@ -31,7 +31,14 @@ const Header = () => {
             <SocialLinksBlock type="header" />
           </div>
           <h1>
-            <Link to={"/"}>NG</Link>
+            <Link
+              to={"/"}
+              className={classNames({
+                [styles.active]: location.pathname === "/",
+              })}
+            >
+              NG
+            </Link>
           </h1>
           <span>hello@ng.com</span>
         </div>

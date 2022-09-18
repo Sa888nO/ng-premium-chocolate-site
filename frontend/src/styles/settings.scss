@@ -69,10 +69,12 @@ th {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 html,
 body {
   height: 100%;
+  background-color: black;
+  color: #ffe880;
 }

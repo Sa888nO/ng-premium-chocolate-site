@@ -1,1 +1,46 @@
-
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.logo-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 681px;
+  position: relative;
+  &_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./../../../assets/massimo-adami-mnu0Er.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+  }
+  &_text-block {
+    padding: 10px 10px;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &_main-text {
+    max-width: 250px;
+    text-align: start;
+    font-size: 14px;
+    word-spacing: 5px;
+  }
+  &_sub-text {
+    margin-left: auto;
+    text-align: end;
+  }
+}

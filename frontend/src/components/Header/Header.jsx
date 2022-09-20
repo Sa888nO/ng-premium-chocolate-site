@@ -37,7 +37,7 @@ const Header = () => {
                 [styles.active]: location.pathname === "/",
               })}
             >
-              NG
+              <img src="/Logo.png" alt="1" />
             </Link>
           </h1>
           <span>hello@ng.com</span>
@@ -74,6 +74,14 @@ const Header = () => {
             })}
           >
             Об авторе
+          </Link>
+          <Link
+            to={"/about-candy"}
+            className={classNames({
+              [styles.active]: location.pathname === "/about-candy",
+            })}
+          >
+            О конфетах
           </Link>
           <Link
             to={"/composition-and-storage"}

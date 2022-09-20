@@ -11,6 +11,7 @@ function App() {
       <Wrapper>
         <Content>
           <Header />
+
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route
@@ -26,6 +27,7 @@ function App() {
               element={<div>delivery-and-payment</div>}
             />
             <Route path="/about-author" element={<div>about-author</div>} />
+            <Route path="/about-candy" element={<div>about-candy</div>} />
             <Route
               path="/composition-and-storage"
               element={<div>composition-and-storage</div>}

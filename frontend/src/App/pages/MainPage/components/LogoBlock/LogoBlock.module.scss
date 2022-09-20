@@ -34,11 +34,13 @@
     font-size: 35px;
     word-spacing: 5px;
     font-weight: bold;
+    z-index: 1;
   }
   &_sub-text {
     font-size: 16px;
     line-height: 25px;
     font-weight: normal;
+    opacity: 0.7;
   }
   &_links-block {
     display: flex;
@@ -74,5 +76,17 @@
   .logo-block_links-block {
     flex-direction: column;
     min-width: 200px;
+  }
+  .logo-block_text-block {
+    padding-left: 30px;
+  }
+  .logo-block_main-text {
+    font-size: 30px;
+  }
+  .logo-block_sub-text {
+    font-size: 14px;
+  }
+  .logo-block_links-block {
+    margin-right: 20px;
   }
 }

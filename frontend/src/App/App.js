@@ -5,6 +5,8 @@ import Wrapper from "@components/Wrapper";
 import MainPage from "@pages/MainPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import ShopPage from "./pages/ShopPage/ShopPage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,10 +16,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route
-              path="/shop"
-              element={<div>SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</div>}
-            />
+            <Route path="/shop" element={<ShopPage />} />
             <Route
               path="/corporate-orders"
               element={<div>corporate-orders</div>}

@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import classNames from "classnames";
 
+import BodyCandy from "./components/BodyCandy";
+import Truffles from "./components/Truffles";
 import styles from "./ShopPage.module.scss";
 
 const ShopPage = () => {
@@ -22,6 +24,7 @@ const ShopPage = () => {
           Трюфели
         </span>
       </button>
+      {whatOfCandy ? <BodyCandy /> : <Truffles />}
     </div>
   );
 };

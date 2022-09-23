@@ -81,6 +81,10 @@ export const footerSVG = {
       viewBox="0 0 60 60"
     >
       <desc>Telegram</desc>
+      <linearGradient id="gradientCrown" gradientTransform="rotate(120)">
+        <stop offset="0%" stop-color="#e2ad27" />
+        <stop offset="100%" stop-color="#daa520" />
+      </linearGradient>
       <path
         fill="#ffda34"
         d="M52.5,9L6.1,26.9c-0.9,0.4-0.9,1.8,0,2.3l11.9,4.9l4.4,14.1c0.3,0.8,1.2,1,1.8,0.5l6.8-6.4l12.9,8.7c0.7,0.4,1.6,0,1.7-0.7L54,10.3C54.2,9.5,53.3,8.7,52.5,9z M24.5,36.7L23.8,44l-3.6-11.2l25.3-16.8L24.5,36.7z"

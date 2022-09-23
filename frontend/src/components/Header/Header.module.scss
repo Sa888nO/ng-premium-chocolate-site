@@ -1,3 +1,4 @@
+@import "@styles/settings.scss";
 .header {
   width: 100%;
   min-height: 200px;
@@ -8,6 +9,13 @@
   text-align: center;
   color: #ffda34;
   background-color: black;
+}
+
+.svg-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .block {
@@ -32,6 +40,7 @@
     a {
       font-size: 18px;
       font-weight: 500;
+      @include goldText;
     }
   }
 }
@@ -79,7 +88,7 @@
         line-height: 60px;
       }
       span,
-      div {
+      .icons {
         visibility: hidden;
         display: none;
       }
@@ -190,4 +199,8 @@
 
 .active {
   color: rgb(175, 164, 0);
+}
+
+.svg {
+  background-color: #fedb37;
 }

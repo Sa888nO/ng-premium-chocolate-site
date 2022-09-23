@@ -76,5 +76,18 @@ html,
 body {
   height: 100%;
   background-color: black;
-  color: #ffda34;
+  color: #fedb37;
+}
+
+@mixin goldText {
+  background-image: linear-gradient(
+    to right,
+    #cb9b51 0%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
 }

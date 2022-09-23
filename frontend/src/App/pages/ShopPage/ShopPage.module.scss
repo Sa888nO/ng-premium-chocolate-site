@@ -22,7 +22,18 @@
   transition: color 3s ease;
   .active {
     font-weight: bold;
-    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-image: linear-gradient(
+      to right,
+      #cb9b51 0%,
+      #f6e27a 45%,
+      #f6f2c0 50%,
+      #f6e27a 55%,
+      #cb9b51 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
   }
   &_active {
     background: linear-gradient(60deg, transparent 50px, rgb(90, 36, 0));

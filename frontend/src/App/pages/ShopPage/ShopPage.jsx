@@ -14,7 +14,6 @@ const ShopPage = () => {
         className={classNames(styles.button, {
           [styles["button_active"]]: !whatOfCandy,
         })}
-        class={styles.button}
         onClick={() => setWhatOfCandy(!whatOfCandy)}
       >
         <span className={classNames({ [styles.active]: whatOfCandy })}>

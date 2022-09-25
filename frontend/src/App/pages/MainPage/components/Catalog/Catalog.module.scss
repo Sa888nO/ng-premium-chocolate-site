@@ -1,8 +1,10 @@
+@import "@styles/settings.scss";
 .catalog {
   margin-top: 50px;
   text-align: center;
   font-size: 45px;
   font-weight: bold;
+  @include goldText;
   &_items-block {
     margin-top: 50px;
     justify-content: center;

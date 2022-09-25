@@ -34,9 +34,7 @@ const BodyCandyItem = ({ Title, subTitle, image, info, price }) => {
           16 шт
         </button>
       </div>
-      <div className={styles["candy-card_price"]}>
-        Цена: {currentPrice} руб.
-      </div>
+      <div className={styles["candy-card_price"]}>Цена: {currentPrice} р.</div>
     </div>
   );
 };

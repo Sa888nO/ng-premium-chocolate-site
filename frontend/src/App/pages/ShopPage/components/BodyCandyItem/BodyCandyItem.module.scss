@@ -1,6 +1,10 @@
 .candy-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px 20px 30px 20px;
   width: 30%;
+  gap: 20px;
 
   border-radius: 20px;
   background: radial-gradient(
@@ -26,24 +30,23 @@
     width: 100%;
   }
   &_title {
+    height: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
   }
   &_sub-title {
-    margin-top: 20px;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     opacity: 0.8;
   }
   &_info {
-    margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
   }
   &_button-block {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 500;
     font-size: 20px;
     display: flex;
@@ -57,12 +60,12 @@
     background: none;
     border: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
     &_active {
       font-weight: bold;
     }
   }
   &_price {
-    margin-top: 20px;
     padding-right: 10px;
     font-size: 20px;
     font-weight: bold;

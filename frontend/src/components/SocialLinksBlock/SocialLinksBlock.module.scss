@@ -25,3 +25,9 @@
 #idCrown path {
   fill: url(#gradientCrown);
 }
+
+@media (max-width: 1000px) {
+  .header-link-block {
+    gap: 20px;
+  }
+}

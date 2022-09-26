@@ -67,16 +67,16 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
                   <g>
                     <title>Layer 1</title>
                     <text
-                      font-style="normal"
+                      fontStyle="normal"
                       stroke="#000"
                       transform="matrix(1.186334791807362,0,0,1,-45.50123826252503,0) "
-                      font-weight="bold"
-                      text-anchor="start"
-                      font-family="Roboto, sans-serif"
-                      font-size="20"
+                      fontWeight="bold"
+                      textAnchor="start"
+                      fontFamily="Roboto, sans-serif"
+                      fontSize="20"
                       y="29"
                       x="42.084257"
-                      stroke-width="0"
+                      strokeWidth="0"
                       fill="#fedb37"
                     >
                       premium chocolate

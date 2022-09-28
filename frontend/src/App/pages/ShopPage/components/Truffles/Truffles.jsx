@@ -1,13 +1,22 @@
+import { useState } from "react";
+
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
+import classNames from "classnames";
 
 import { CANDYS } from "./candys";
 import styles from "./Truffles.module.scss";
 
+const price = {
+  first: 1500,
+  second: 3000,
+};
+
 const Truffles = () => {
+  const [currentPrice, setPrice] = useState(price.first);
   return (
     <div className={styles.content}>
       <div className={styles.img}></div>
@@ -26,6 +35,26 @@ const Truffles = () => {
             </AccordionDetails>
           </Accordion>
         ))}
+        <div className={styles["button-block"]}>
+          Коробочка
+          <button
+            onClick={() => setPrice(price.first)}
+            className={classNames(styles["button"], {
+              [styles["button_active"]]: currentPrice === price.first,
+            })}
+          >
+            5 шт
+          </button>
+          <button
+            onClick={() => setPrice(price.second)}
+            className={classNames(styles["button"], {
+              [styles["button_active"]]: currentPrice === price.second,
+            })}
+          >
+            16 шт
+          </button>
+          <div className={styles["price"]}>Цена: {currentPrice} р.</div>
+        </div>
       </div>
     </div>
   );

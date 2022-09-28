@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { Link } from "react-router-dom";
 
 import Catalog from "./components/Catalog";
 import LogoBlock from "./components/LogoBlock";

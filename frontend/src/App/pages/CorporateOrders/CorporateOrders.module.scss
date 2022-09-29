@@ -8,20 +8,25 @@
   @include goldText;
   .block {
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 15px;
     display: flex;
     margin-bottom: 30px;
+    gap: 30px;
   }
   .text-block {
+    margin-top: 50px;
     font-size: 20px;
     flex-direction: column;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    text-align: center;
     &_text-item1 {
     }
     &_text-item2 {
     }
     &_text-item3 {
+      font-weight: bold;
+      text-align: center;
     }
     &_text-item22 {
       display: none;
@@ -35,11 +40,11 @@
   .title {
     text-align: center;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 40px;
   }
   .img {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -51,20 +56,24 @@
     .img {
       width: 100%;
     }
+
     .text-block {
+      margin-top: 0px;
+      font-size: 17px;
+      &_text-item1 {
+        text-align: left;
+      }
       &_text-item2 {
-        display: none;
-        visibility: hidden;
+        text-align: end;
       }
       &_text-item3 {
         display: none;
         visibility: hidden;
       }
-      &_text-item22 {
-        display: block;
-        visibility: visible;
-      }
+
       &_text-item33 {
+        font-weight: bold;
+        text-align: center;
         display: block;
         visibility: visible;
       }

@@ -24,11 +24,6 @@ const CorporateOrders = () => {
         </div>
 
         <img src={background} alt="bg" className={styles.img} />
-        <div className={styles["text-block_text-item22"]}>
-          Различный формат подарков для вручения: от небольших комплиментов
-          (подарочные коробки по 4 конфеты) до больших подарков (подарочные
-          коробки по 40 конфет).
-        </div>
         <div className={styles["text-block_text-item33"]}>
           Срок исполнения заказа: от 2 недель.
         </div>

@@ -38,7 +38,7 @@
     gap: 30px;
     font-size: 30px;
     a {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       @include goldText;
     }
@@ -96,6 +96,10 @@
     &_link {
       gap: 15px;
       flex-direction: column;
+      margin-bottom: 10px;
+      a {
+        font-size: 20px;
+      }
     }
   }
   .hidden-block {

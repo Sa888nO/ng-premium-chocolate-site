@@ -18,8 +18,15 @@
     font-size: 20px;
     flex-direction: column;
     display: flex;
+    width: 50%;
+    align-items: center;
     gap: 30px;
     text-align: center;
+    &_text-item1,
+    &_text-item2,
+    &_text-item3 {
+      max-width: 400px;
+    }
     &_text-item1 {
     }
     &_text-item2 {
@@ -58,8 +65,10 @@
     }
 
     .text-block {
+      width: 100%;
       margin-top: 0px;
       font-size: 17px;
+
       &_text-item1 {
       }
       &_text-item2 {

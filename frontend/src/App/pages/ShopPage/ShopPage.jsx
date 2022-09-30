@@ -17,7 +17,7 @@ const ShopPage = () => {
         onClick={() => setWhatOfCandy(!whatOfCandy)}
       >
         <span className={classNames({ [styles.active]: whatOfCandy })}>
-          Коробочные конфеты
+          Корпусные конфеты
         </span>
         <span className={classNames({ [styles.active]: !whatOfCandy })}>
           Трюфели

@@ -98,6 +98,14 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
             Каталог
           </Link>
           <Link
+            to={"/tastes"}
+            className={classNames({
+              [styles.active]: location.pathname === "/tastes",
+            })}
+          >
+            Вкусы
+          </Link>
+          <Link
             to={"/corporate-orders"}
             className={classNames({
               [styles.active]: location.pathname === "/corporate-orders",

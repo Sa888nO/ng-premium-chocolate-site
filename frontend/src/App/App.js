@@ -6,7 +6,8 @@ import MainPage from "@pages/MainPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import CorporateOrders from "./pages/CorporateOrders";
-import ShopPage from "./pages/ShopPage/ShopPage";
+import ShopPage from "./pages/ShopPage";
+import TastesPage from "./pages/TastesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/tastes" element={<TastesPage />} />
             <Route path="/corporate-orders" element={<CorporateOrders />} />
             <Route
               path="/delivery-and-payment"

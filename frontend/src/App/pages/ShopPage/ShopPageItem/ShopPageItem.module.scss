@@ -1,0 +1,46 @@
+@import "@styles/settings.scss";
+.card {
+  flex: none;
+  width: 400px;
+  height: 600px;
+  background-color: rgb(12, 12, 12);
+
+  .img {
+    width: 400px;
+    height: 400px;
+  }
+  .info-block {
+    @include goldText;
+    height: 200px; //fix this
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .button {
+      background-color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 25px;
+      border-radius: 40px;
+      width: 80%;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: none;
+    width: 300px;
+    height: 450px;
+    background-color: aliceblue;
+    .img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

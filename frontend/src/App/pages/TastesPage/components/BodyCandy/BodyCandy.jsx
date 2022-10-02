@@ -1,11 +1,13 @@
+import CandyFlavors from "@store/CandyFlavors";
+import { observer } from "mobx-react-lite";
+
 import { BodyCandyItem } from "../index";
 import styles from "./BodyCandy.module.scss";
-import { CANDYS } from "./candys";
 
 const BodyCandy = () => {
   return (
     <div className={styles.content}>
-      {CANDYS.map((candy, key) => (
+      {CandyFlavors.getFlavors.map((candy, key) => (
         <BodyCandyItem
           key={key}
           image={candy.image}
@@ -18,4 +20,4 @@ const BodyCandy = () => {
     </div>
   );
 };
-export default BodyCandy;
+export default observer(BodyCandy);

@@ -5,9 +5,10 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
+import TruffleFlavors from "@store/TruffleFlavors";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
 
-import { CANDYS } from "./candys";
 import styles from "./Truffles.module.scss";
 
 const price = {
@@ -21,7 +22,7 @@ const Truffles = () => {
     <div className={styles.content}>
       <div className={styles.img}></div>
       <div>
-        {CANDYS.map((candy, key) => (
+        {TruffleFlavors.getFlavors.map((candy, key) => (
           <Accordion className={styles.font} key={key}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon color="warning" />}
@@ -59,4 +60,4 @@ const Truffles = () => {
     </div>
   );
 };
-export default Truffles;
+export default observer(Truffles);

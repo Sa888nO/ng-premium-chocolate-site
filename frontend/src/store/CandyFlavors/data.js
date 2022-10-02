@@ -1,4 +1,4 @@
-export const CANDYS = [
+export const Data = [
   {
     image: "/bodyCandyImage/1.png",
     title: "Малина/ваниль",

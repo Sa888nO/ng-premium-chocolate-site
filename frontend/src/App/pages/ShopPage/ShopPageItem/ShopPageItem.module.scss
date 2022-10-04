@@ -1,38 +1,36 @@
 @import "@styles/settings.scss";
 
-.cpec {
-  height: 600px !important;
-
-  .img {
-    max-height: 430px !important;
-  }
-}
 .card {
-  flex: none;
-  width: 500px;
-  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 500px;
   background-color: rgb(12, 12, 12);
   .img {
-    width: 500px;
-    height: 500px;
+    flex: 1 1 1;
+    width: 300px;
+    height: 350px;
   }
-  .info-block-cpec {
-    height: 175px !important;
-  }
+
   .info-block {
     @include goldText;
-    height: 250px; //fix this
-    padding: 10px 10px 25px 10px;
-    justify-content: space-between;
+    height: 100%;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     flex-direction: column;
+
     .title {
-      font-size: 30px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 25px;
       font-weight: bold;
     }
     .button {
-      flex: 1 1 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,72 +40,25 @@
       font-weight: bold;
       font-size: 25px;
       border-radius: 40px;
-      width: 80%;
-      height: 50px;
-    }
-    .price-block {
-      gap: 20px;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      display: flex;
-
-      justify-content: space-around;
-      .price {
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .switch-block {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-      }
-      .button-switch {
-        font-size: 18px;
-        display: inline;
-        background: none;
-        border: none;
-        cursor: pointer;
-        @include goldText;
-        &_active {
-          font-weight: bold;
-        }
-      }
+      width: 65%;
+      height: 40px;
     }
   }
 }
 
 @media (max-width: 600px) {
-  .cpec {
-    height: 500px !important;
-  }
-
   .card {
     flex: none;
-    width: 350px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
     .img {
-      width: 350px;
+      width: 300px;
       height: 350px;
     }
-    .info-block-cpec {
-      height: 160px !important;
-    }
-    .info-block {
-      padding-top: 5px;
-      @include goldText;
-      height: 250px; //fix this
 
-      .title {
-        font-size: 30px;
-        font-weight: bold;
-      }
+    .info-block {
       .button {
         font-size: 20px;
-        height: 50px;
-      }
-      .price-block {
-        gap: 25px;
       }
     }
   }

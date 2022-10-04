@@ -46,7 +46,7 @@ const Header = () => {
                   height="73.000000pt"
                   viewBox="0 0 113.000000 73.000000"
                   preserveAspectRatio="xMidYMid meet"
-                  fill="#231309"
+                  fill="black"
                 >
                   <g transform="translate(0.000000,73.000000) scale(0.100000,-0.100000)">
                     <path

@@ -26,7 +26,7 @@ const ShopPageItem = ({ id, title, image, type = true, typeSize = false }) => {
         })}
       >
         <div className={styles.title}>{title}</div>
-        <div className={styles["price-block"]}>
+        {/* <div className={styles["price-block"]}>
           <div className={styles["switch-block"]}>
             <button
               onClick={() => setCandyNumber(9)}
@@ -72,7 +72,7 @@ const ShopPageItem = ({ id, title, image, type = true, typeSize = false }) => {
           <div className={styles.price}>
             Цена: {price[`number${candyNumber}`]} р.
           </div>
-        </div>
+        </div> */}
         {type ? (
           <Link
             onClick={() => {
@@ -81,7 +81,7 @@ const ShopPageItem = ({ id, title, image, type = true, typeSize = false }) => {
             to={"/tastes"}
             className={styles.button}
           >
-            Выбрать вкус
+            Подробнее
           </Link>
         ) : (
           <></>

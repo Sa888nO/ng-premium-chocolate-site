@@ -14,7 +14,6 @@ const BodyCandy = () => {
           Title={candy.title}
           subTitle={candy.subTitle}
           info={candy.info}
-          price={candy.price}
         />
       ))}
     </div>

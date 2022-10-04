@@ -1,0 +1,35 @@
+@import "@styles/settings.scss";
+.content {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  @include goldText;
+  .title-info {
+    text-align: center;
+    font-size: 25px;
+  }
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .font {
+    box-shadow: none;
+
+    max-width: 800px;
+    @include goldText;
+    background-color: inherit;
+  }
+  .font2 {
+    font-size: 20px;
+    @include goldText;
+  }
+  .font3 {
+    font-size: 18px;
+    @include goldText;
+  }
+}

@@ -1,18 +1,29 @@
 @import "@styles/settings.scss";
-.card {
-  flex: none;
-  width: 400px;
-  height: 600px;
-  background-color: rgb(12, 12, 12);
+
+.cpec {
+  height: 600px !important;
 
   .img {
-    width: 400px;
-    height: 400px;
+    max-height: 430px !important;
+  }
+}
+.card {
+  flex: none;
+  width: 500px;
+  height: 750px;
+  background-color: rgb(12, 12, 12);
+  .img {
+    width: 500px;
+    height: 500px;
+  }
+  .info-block-cpec {
+    height: 175px !important;
   }
   .info-block {
     @include goldText;
-    height: 200px; //fix this
-    justify-content: space-around;
+    height: 250px; //fix this
+    padding: 10px 10px 25px 10px;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -21,6 +32,11 @@
       font-weight: bold;
     }
     .button {
+      flex: 1 1 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
       background-color: white;
       border: none;
       font-weight: bold;
@@ -29,18 +45,70 @@
       width: 80%;
       height: 50px;
     }
+    .price-block {
+      gap: 20px;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+
+      justify-content: space-around;
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .switch-block {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .button-switch {
+        font-size: 18px;
+        display: inline;
+        background: none;
+        border: none;
+        cursor: pointer;
+        @include goldText;
+        &_active {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 600px) {
+  .cpec {
+    height: 500px !important;
+  }
+
   .card {
     flex: none;
-    width: 300px;
-    height: 450px;
-    background-color: aliceblue;
+    width: 350px;
+    height: 600px;
     .img {
-      width: 300px;
-      height: 300px;
+      width: 350px;
+      height: 350px;
+    }
+    .info-block-cpec {
+      height: 160px !important;
+    }
+    .info-block {
+      padding-top: 5px;
+      @include goldText;
+      height: 250px; //fix this
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .button {
+        font-size: 20px;
+        height: 50px;
+      }
+      .price-block {
+        gap: 25px;
+      }
     }
   }
 }

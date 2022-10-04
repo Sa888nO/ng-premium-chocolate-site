@@ -1,16 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import CurrentCandy from "@store/CurrentCandy";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
 
+import ShopPageItem from "../ShopPage/ShopPageItem";
 import BodyCandy from "./components/BodyCandy";
 import Truffles from "./components/Truffles";
+import { Data } from "./data";
 import styles from "./TastesPage.module.scss";
 
 const TastesPage = () => {
-  const [whatOfCandy, setWhatOfCandy] = useState(true);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  let currentDataItem = Data[CurrentCandy.currentCandy - 1];
   return (
     <div className={classNames(styles.content)}>
-      <button
+      {CurrentCandy.currentCandy === -1 ? (
+        <></>
+      ) : (
+        <div className={styles.cur}>
+          <ShopPageItem
+            id={currentDataItem.id}
+            title={currentDataItem.title}
+            image={currentDataItem.image}
+            type={false}
+            typeSize={true}
+          />
+        </div>
+      )}
+      <div className={styles.tastes}>Вкусы</div>
+      {/* <button
         className={classNames(styles.button, {
           [styles["button_active"]]: !whatOfCandy,
         })}
@@ -22,9 +44,9 @@ const TastesPage = () => {
         <span className={classNames({ [styles.active]: !whatOfCandy })}>
           Трюфели
         </span>
-      </button>
-      {whatOfCandy ? <BodyCandy /> : <Truffles />}
+      </button> */}
+      {CurrentCandy.currentCandy != 3 ? <BodyCandy /> : <Truffles />}
     </div>
   );
 };
-export default TastesPage;
+export default observer(TastesPage);

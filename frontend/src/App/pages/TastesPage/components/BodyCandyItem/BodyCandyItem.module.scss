@@ -1,9 +1,9 @@
 .candy-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px 20px 30px 20px;
-  width: 30%;
+  width: 40%;
   gap: 20px;
 
   border-radius: 20px;
@@ -30,7 +30,6 @@
     width: 100%;
   }
   &_title {
-    height: 60px;
     text-align: center;
     font-size: 26px;
     font-weight: bold;
@@ -44,30 +43,6 @@
   &_info {
     font-size: 16px;
     font-weight: 500;
-  }
-  &_button-block {
-    margin-top: 10px;
-    font-weight: 500;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &_button {
-    font-size: 20px;
-    display: inline;
-    background: none;
-    border: none;
-    cursor: pointer;
-    &_active {
-      font-weight: bold;
-    }
-  }
-  &_price {
-    padding-right: 10px;
-    font-size: 20px;
-    font-weight: bold;
   }
 }
 @media (max-width: 600px) {

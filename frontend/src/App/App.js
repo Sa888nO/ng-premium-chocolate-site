@@ -6,6 +6,7 @@ import MainPage from "@pages/MainPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import CorporateOrders from "./pages/CorporateOrders";
+import DelivaryAndPaymentPage from "./pages/DelivaryAndPaymentPage";
 import ShopPage from "./pages/ShopPage";
 import TastesPage from "./pages/TastesPage";
 
@@ -23,7 +24,7 @@ function App() {
             <Route path="/corporate-orders" element={<CorporateOrders />} />
             <Route
               path="/delivery-and-payment"
-              element={<div>delivery-and-payment</div>}
+              element={<DelivaryAndPaymentPage />}
             />
             <Route path="/about-author" element={<div>about-author</div>} />
             <Route path="/about-candy" element={<div>about-candy</div>} />

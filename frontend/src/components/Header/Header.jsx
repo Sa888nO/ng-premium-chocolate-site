@@ -46,7 +46,7 @@ const Header = () => {
                   height="73.000000pt"
                   viewBox="0 0 113.000000 73.000000"
                   preserveAspectRatio="xMidYMid meet"
-                  fill="black"
+                  fill="#231309"
                 >
                   <g transform="translate(0.000000,73.000000) scale(0.100000,-0.100000)">
                     <path
@@ -97,14 +97,7 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
           >
             Каталог
           </Link>
-          <Link
-            to={"/tastes"}
-            className={classNames({
-              [styles.active]: location.pathname === "/tastes",
-            })}
-          >
-            Вкусы
-          </Link>
+
           <Link
             to={"/corporate-orders"}
             className={classNames({

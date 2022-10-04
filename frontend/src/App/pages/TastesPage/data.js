@@ -1,0 +1,16 @@
+export const Data = [
+  { id: 1, image: "/shopItemImages/1.jpg", title: "Дизайн 1" },
+  { id: 2, image: "/shopItemImages/2.jpg", title: "Дизайн 2" },
+  { id: 3, image: "/shopItemImages/3.jpg", title: "Дизайн 3" },
+  { id: 4, image: "/shopItemImages/4.jpg", title: "Дизайн 4" },
+  { id: 5, image: "/shopItemImages/5.jpg", title: "Дизайн 5" },
+  { id: 6, image: "/shopItemImages/6.jpg", title: "Дизайн 6" },
+  { id: 7, image: "/shopItemImages/7.jpg", title: "Дизайн 7" },
+  { id: 8, image: "/shopItemImages/8.jpg", title: "Дизайн 8" },
+  { id: 9, image: "/shopItemImages/9.jpg", title: "Дизайн 9" },
+  { id: 10, image: "/shopItemImages/10.jpg", title: "Дизайн 10" },
+  { id: 11, image: "/shopItemImages/11.jpg", title: "Дизайн 11" },
+  { id: 12, image: "/shopItemImages/12.jpg", title: "Дизайн 12" },
+  { id: 13, image: "/shopItemImages/13.jpg", title: "Дизайн 13" },
+  { id: 14, image: "/shopItemImages/14.jpg", title: "Дизайн 14" },
+];

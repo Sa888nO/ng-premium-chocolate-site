@@ -36,26 +36,6 @@ const Truffles = () => {
             </AccordionDetails>
           </Accordion>
         ))}
-        <div className={styles["button-block"]}>
-          Коробочка
-          <button
-            onClick={() => setPrice(price.first)}
-            className={classNames(styles["button"], {
-              [styles["button_active"]]: currentPrice === price.first,
-            })}
-          >
-            5 шт
-          </button>
-          <button
-            onClick={() => setPrice(price.second)}
-            className={classNames(styles["button"], {
-              [styles["button_active"]]: currentPrice === price.second,
-            })}
-          >
-            16 шт
-          </button>
-          <div className={styles["price"]}>Цена: {currentPrice} р.</div>
-        </div>
       </div>
     </div>
   );

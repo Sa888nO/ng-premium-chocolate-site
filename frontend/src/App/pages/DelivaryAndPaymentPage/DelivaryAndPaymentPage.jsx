@@ -11,7 +11,7 @@ const DelivaryAndPaymentPage = () => {
     <div className={styles.content}>
       <div className={styles["title-info"]}>
         Вы можете заказать конфеты в понравившемся вам дизайне или выбрать
-        конфеты из наличия. Заказы день в день принимаются только из наличия.
+        конфеты из наличия.
       </div>
       <div className={styles["info-block"]}>
         <Accordion className={styles.font}>
@@ -80,6 +80,9 @@ const DelivaryAndPaymentPage = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
+      </div>
+      <div className={styles["cpec-info"]}>
+        Заказы день в день принимаются только из наличия.
       </div>
     </div>
   );

@@ -9,23 +9,30 @@
   margin: 0 auto;
   @include goldText;
   .title-info {
+    max-width: 800px;
     text-align: center;
     font-size: 25px;
   }
+  .cpec-info {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+  }
   .info-block {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   .font {
     box-shadow: none;
-
     max-width: 800px;
     @include goldText;
     background-color: inherit;
   }
   .font2 {
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 22px;
     @include goldText;
   }
   .font3 {

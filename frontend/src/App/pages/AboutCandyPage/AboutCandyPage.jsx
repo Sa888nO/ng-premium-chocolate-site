@@ -3,6 +3,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
+import classNames from "classnames";
 
 import styles from "./AboutCandyPage.module.scss";
 import picture from "./bg.jpg";
@@ -86,6 +87,19 @@ const AboutCandyPage = () => {
           </AccordionDetails>
         </Accordion>
       </div>
+      <div className={classNames(styles.title, styles.mt)}>Состав</div>
+      <div className={styles["text-info-ing"]}>
+        Шоколадные изделия в зависимости от их вида имеют в своем составе
+        следующие ингредиенты
+      </div>
+      <ul className={styles.push}>
+        <li>бельгийский шоколад марки Callebaut</li>
+        <li>французский шоколад марки Valrhona</li>
+        <li>натуральные сливки</li>
+        <li>орехи активированные, сублимированные ягоды и фрукты</li>
+        <li>ягодное или фруктовое пюре</li>
+        <li>натуральный кофе, травы, мед, специи</li>
+      </ul>
     </div>
   );
 };

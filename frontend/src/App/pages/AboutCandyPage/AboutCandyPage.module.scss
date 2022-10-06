@@ -1,0 +1,84 @@
+@import "@styles/settings.scss";
+.content {
+  padding: 0px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  @include goldText;
+  .title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  .choko-block {
+    display: flex;
+    gap: 30px;
+  }
+  .img {
+    width: 50%;
+  }
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+    .text {
+      font-size: 17px;
+      text-align: justify;
+    }
+  }
+  .info-block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .font {
+    box-shadow: none;
+    max-width: 800px;
+    @include goldText;
+    background-color: inherit;
+  }
+  .font2 {
+    font-weight: bold;
+    font-size: 22px;
+    @include goldText;
+  }
+  .font3 {
+    display: flex;
+    font-size: 18px;
+    gap: 30px;
+    @include goldText;
+    text-align: justify;
+    .img {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    .text-block {
+      margin-bottom: 15px;
+    }
+    .choko-block {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .img {
+      margin: 0 auto;
+      width: 90%;
+    }
+    .font3 {
+      gap: 10px;
+      flex-direction: column;
+      .img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
+}

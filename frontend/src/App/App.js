@@ -5,6 +5,7 @@ import Wrapper from "@components/Wrapper";
 import MainPage from "@pages/MainPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import AboutCandyPage from "./pages/AboutCandyPage";
 import CorporateOrders from "./pages/CorporateOrders";
 import DelivaryAndPaymentPage from "./pages/DelivaryAndPaymentPage";
 import DevPage from "./pages/DevPage";
@@ -28,7 +29,7 @@ function App() {
               element={<DelivaryAndPaymentPage />}
             />
             <Route path="/about-author" element={<DevPage />} />
-            <Route path="/about-candy" element={<DevPage />} />
+            <Route path="/about-candy" element={<AboutCandyPage />} />
             <Route path="/composition-and-storage" element={<DevPage />} />
             <Route path={"/contacts"} element={<DevPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />

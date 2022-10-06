@@ -1,0 +1,93 @@
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+
+import styles from "./AboutCandyPage.module.scss";
+import picture from "./bg.jpg";
+import choco1 from "./choco1.jpg";
+import choco2 from "./choco2.jpg";
+import choco3 from "./choco3.jpg";
+
+const AboutCandyPage = () => {
+  return (
+    <div className={styles.content}>
+      <div className={styles.title}>Шоколад</div>
+      <div className={styles["choko-block"]}>
+        <div className={styles["text-block"]}>
+          <div className={styles.text}>
+            В изготовлении конфет используется качественный и признанный
+            известными шоколатье по всему миру бельгийский шоколад фирмы
+            CALLEBAUT
+          </div>
+          <div className={styles.text}>
+            В наших конфетах используются только лучшие ингредиенты, CALLEBAUT
+            создает Finest Belgian Choсolate в самом сердце Бельгии на
+            протяжении 100 лет.
+          </div>
+          <div className={styles.text}>
+            Из поколения в поколение шоколад CALLEBAUT создается с любовью и
+            преданностью своему делу.
+          </div>
+        </div>
+        <img className={styles.img} src={picture} alt="background" />
+      </div>
+      <div className={styles["info-block"]}>
+        <Accordion className={styles.font}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon color="warning" />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={styles.font2}>Белый шоколад</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={styles.font3}>
+              сахар, масло какао, сухое цельное молоко, эмульгатор – соевый
+              лецитин, натуральный ароматизатор – ваниль, содержание
+              какао-продуктов мин. 32%
+              <img className={styles.img} src={choco1} alt="background" />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion className={styles.font}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon color="warning" />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={styles.font2}>Молочный шоколад</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={styles.font3}>
+              сахар, масло какао, сухое цельное молоко, какао тертое, эмульгатор
+              – соевый лецитин, натуральный ароматизатор – ваниль, содержание
+              какао-продуктов мин. 33,6%
+              <img className={styles.img} src={choco2} alt="background" />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion className={styles.font}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon color="warning" />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={styles.font2}>Темный шоколад</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={styles.font3}>
+              какао тертое, сахар, масло какао, эмульгатор – соевый лецитин,
+              натуральный ароматизатор – ваниль, содержание какао-продуктов мин.
+              54,5%
+              <img className={styles.img} src={choco3} alt="background" />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+    </div>
+  );
+};
+
+export default AboutCandyPage;

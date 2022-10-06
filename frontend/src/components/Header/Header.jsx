@@ -128,7 +128,7 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
               [styles.active]: location.pathname === "/about-candy",
             })}
           >
-            О конфетах
+            Состав
           </Link>
           <Link
             to={"/composition-and-storage"}

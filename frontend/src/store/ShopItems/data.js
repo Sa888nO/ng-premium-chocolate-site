@@ -1,16 +1,37 @@
+import img1 from "@assets/shopItemImages/1.jpg";
+import img10 from "@assets/shopItemImages/10.jpg";
+import img11 from "@assets/shopItemImages/11.jpg";
+import img12 from "@assets/shopItemImages/12.JPG";
+import img13 from "@assets/shopItemImages/13.jpg";
+import img14 from "@assets/shopItemImages/14.jpg";
+import img15 from "@assets/shopItemImages/15.jpeg";
+import img16 from "@assets/shopItemImages/16.jpg";
+import img17 from "@assets/shopItemImages/17.jpg";
+import img2 from "@assets/shopItemImages/2.jpg";
+import img3 from "@assets/shopItemImages/3.jpeg";
+import img4 from "@assets/shopItemImages/4.jpeg";
+import img5 from "@assets/shopItemImages/5.jpg";
+import img6 from "@assets/shopItemImages/6.jpeg";
+import img7 from "@assets/shopItemImages/7.jpeg";
+import img8 from "@assets/shopItemImages/8.jpeg";
+import img9 from "@assets/shopItemImages/9.jpg";
+
 export const Data = [
-  { id: 1, image: "/shopItemImages/1.jpg", title: "Дизайн 1" },
-  { id: 2, image: "/shopItemImages/2.jpg", title: "Дизайн 2" },
-  { id: 3, image: "/shopItemImages/3.jpg", title: "Дизайн 3" },
-  { id: 4, image: "/shopItemImages/4.jpg", title: "Дизайн 4" },
-  { id: 5, image: "/shopItemImages/5.jpg", title: "Дизайн 5" },
-  { id: 6, image: "/shopItemImages/6.jpg", title: "Дизайн 6" },
-  { id: 7, image: "/shopItemImages/7.jpg", title: "Дизайн 7" },
-  { id: 8, image: "/shopItemImages/8.jpg", title: "Дизайн 8" },
-  { id: 9, image: "/shopItemImages/9.jpg", title: "Дизайн 9" },
-  { id: 10, image: "/shopItemImages/10.jpg", title: "Дизайн 10" },
-  { id: 11, image: "/shopItemImages/11.jpg", title: "Дизайн 11" },
-  { id: 12, image: "/shopItemImages/12.jpg", title: "Дизайн 12" },
-  { id: 13, image: "/shopItemImages/13.jpg", title: "Дизайн 13" },
-  { id: 14, image: "/shopItemImages/14.jpg", title: "Дизайн 14" },
+  { id: 1, image: img1, title: "Королевский" },
+  { id: 2, image: img2, title: "Нежность" },
+  { id: 3, image: img3, title: "Прованс" },
+  { id: 4, image: img4, title: "Роскошь" },
+  { id: 5, image: img5, title: "Учителю" },
+  { id: 6, image: img6, title: "Хеллоуин" },
+  { id: 7, image: img7, title: "Цветы" },
+  { id: 8, image: img8, title: "Шоколад с печатью" },
+  { id: 9, image: img9, title: "Месяца" },
+  { id: 10, image: img10, title: "Трюфели" },
+  { id: 11, image: img11, title: "Машинки" },
+  { id: 12, image: img12, title: "Cердца" },
+  { id: 13, image: img13, title: "Gold" },
+  { id: 14, image: img14, title: "Авангард" },
+  { id: 15, image: img15, title: "Love" },
+  { id: 16, image: img16, title: "Love story 1" },
+  { id: 17, image: img17, title: "Love story 2" },
 ];

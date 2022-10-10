@@ -10,21 +10,27 @@ import BodyCandy from "./components/BodyCandy";
 import Truffles from "./components/Truffles";
 import styles from "./TastesPage.module.scss";
 
+const price = {
+  number9: "900",
+  number12: "1200",
+  number16: "1600",
+  number24: "2400",
+  number30: "3000",
+};
+
 const TastesPage = () => {
   const { id } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  let currentDataItem = ShopItems.getItems[id - 1];
+  let currentItem = ShopItems.getItems[id - 1];
   return (
     <div className={classNames(styles.content)}>
-      <div className={styles.cur}>
-        <ShopPageItem
-          id={currentDataItem.id}
-          title={currentDataItem.title}
-          image={currentDataItem.image}
-        />
+      <img className={styles["img"]} src={currentItem.image} alt="candy" />
+      <div className={styles["core-block"]}>
+        <div className={styles["core-block__title"]}>{currentItem.title}</div>
+        <div className={styles["price-block"]}>Количество:</div>
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ const price = {
 };
 
 const TastesPage = () => {
+  const [countCandy, setCountCandy] = useState(9);
   const { id } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,7 +31,21 @@ const TastesPage = () => {
       <img className={styles["img"]} src={currentItem.image} alt="candy" />
       <div className={styles["core-block"]}>
         <div className={styles["core-block__title"]}>{currentItem.title}</div>
-        <div className={styles["price-block"]}>Количество:</div>
+        <div className={styles["price-block"]}>
+          <div className={styles["price-block__select"]}>
+            Количество:
+            <select onChange={(e) => setCountCandy(e.target.value)}>
+              <option>9</option>
+              <option>12</option>
+              <option>16</option>
+              <option>24</option>
+              <option>30</option>
+            </select>
+          </div>
+          <div className={styles["price-block__price"]}>
+            Цена: <span>{price[`number${countCandy}`]}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

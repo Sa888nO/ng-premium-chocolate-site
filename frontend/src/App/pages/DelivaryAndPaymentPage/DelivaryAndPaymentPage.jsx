@@ -36,7 +36,7 @@ const DelivaryAndPaymentPage = () => {
             id="panel1a-header"
           >
             <Typography className={styles.font2}>
-              Доставка по Москве и МО
+              Доставка по г. Электросталь и МО
             </Typography>
           </AccordionSummary>
           <AccordionDetails>

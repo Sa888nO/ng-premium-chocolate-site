@@ -8,6 +8,19 @@
   max-width: 1100px;
   margin: 0 auto;
   @include goldText;
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
   .title-info {
     max-width: 800px;
     text-align: center;
@@ -37,6 +50,10 @@
   }
   .font3 {
     font-size: 18px;
-    @include goldText;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

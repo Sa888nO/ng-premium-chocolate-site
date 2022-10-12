@@ -41,7 +41,7 @@ const DelivaryAndPaymentPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography className={styles.font3}>
-              осуществляется службой Яндекс Такси (сервис - доставка).
+              Осуществляется службой Яндекс Такси (сервис - доставка).
               Стоимость: по тарифу сервиса на момент оформления доставки.
             </Typography>
           </AccordionDetails>
@@ -56,11 +56,8 @@ const DelivaryAndPaymentPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography className={styles.font3}>
-              в соответствии тарифом доставки выбранной логистической компании.
-              Средняя стоимость доставки небольшого заказа: с сентября по июнь
-              (стандартная доставка) - 500-800 руб. С июня по сентябрь (с
-              соблюдением терморежима) - 3000-6000.Средний срок доставки: 1-5
-              дней.
+              Осуществляется транспортной компанией СДЭК до адреса или до пункта
+              выдачи в вашем городе.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -70,17 +67,31 @@ const DelivaryAndPaymentPage = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={styles.font2}>Срок изготовления</Typography>
+            <Typography className={styles.font2}>Доставка по Москве</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography className={styles.font3}>
-              составляет от 3 дней в зависимости от загруженности на момент
-              приема заказа сложности выполнения заказа и количества конфет в
-              заказе, а также от наличия конкретных ингредиентов.
+              <ul>
+                <li>
+                  Доставка продукции по Москве, осуществляется по средам с 19.00
+                  до 22.00 бесплатно.
+                </li>
+                <li>
+                  В остальные дни по индивидуальному согласованию. Стоимость
+                  доставки 500 руб
+                </li>
+              </ul>
             </Typography>
           </AccordionDetails>
         </Accordion>
       </div>
+      <div className={styles.title}>СПОСОБЫ ОПЛАТЫ</div>
+      <ul className={styles.ul}>
+        <li>Наличными при самовывозе</li>
+        <li>
+          Оплата с банковской карты (при самовывозе или предоплата при доставке)
+        </li>
+      </ul>
       <div className={styles["cpec-info"]}>
         Заказы день в день принимаются только из наличия.
       </div>

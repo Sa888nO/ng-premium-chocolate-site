@@ -1,0 +1,17 @@
+@import "@styles/settings.scss";
+.accordion {
+  box-shadow: none;
+  max-width: 800px;
+  @include goldText;
+
+  .title {
+    font-weight: bold;
+    font-size: 22px;
+    @include goldText;
+  }
+
+  .content {
+    font-size: 18px;
+    @include goldText;
+  }
+}

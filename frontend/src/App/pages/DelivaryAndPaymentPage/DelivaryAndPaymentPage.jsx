@@ -1,8 +1,6 @@
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+import React from "react";
+
+import AccordionItem from "@components/AccordionItem";
 
 import styles from "./DelivaryAndPaymentPage.module.scss";
 
@@ -14,63 +12,22 @@ const DelivaryAndPaymentPage = () => {
         конфеты из наличия.
       </div>
       <div className={styles["info-block"]}>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Самовывоз</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
-              г. Электросталь, ул. Мира, д.22В. Бесплатно. По предварительному
-              согласованию времени вашего визита.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>
-              Доставка по г. Электросталь и МО
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
-              Осуществляется службой Яндекс Такси (сервис - доставка).
-              Стоимость: по тарифу сервиса на момент оформления доставки.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Доставка по России</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
-              Осуществляется транспортной компанией СДЭК до адреса или до пункта
-              выдачи в вашем городе.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Доставка по Москве</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
+        <AccordionItem
+          title="Самовывоз"
+          content="г. Электросталь, ул. Мира, д.22В. Бесплатно. По предварительному согласованию времени вашего визита."
+        />
+        <AccordionItem
+          title="Доставка по г. Электросталь и МО"
+          content="г. Электросталь, ул. Мира, д.22В. Бесплатно. По предварительному согласованию времени вашего визита."
+        />
+        <AccordionItem
+          title="Доставка по России"
+          content="Осуществляется транспортной компанией СДЭК до адреса или до пункта выдачи в вашем городе."
+        />
+        <AccordionItem
+          title="Доставка по Москве"
+          content={
+            <React.Fragment>
               <ul>
                 <li>
                   Доставка продукции по Москве, осуществляется по средам с 19.00
@@ -81,9 +38,9 @@ const DelivaryAndPaymentPage = () => {
                   доставки 500 руб
                 </li>
               </ul>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+            </React.Fragment>
+          }
+        />
       </div>
       <div className={styles.title}>СПОСОБЫ ОПЛАТЫ</div>
       <ul className={styles.ul}>

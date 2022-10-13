@@ -1,5 +1,6 @@
 export const Data = [
   {
+    id: 1,
     image: "/bodyCandyImage/1.png",
     title: "Малина/ваниль",
     subTitle: "Мягкий ганаш на малиновом пюре",
@@ -7,6 +8,7 @@ export const Data = [
     price: { first: 1000, second: 2000 },
   },
   {
+    id: 2,
     image: "/bodyCandyImage/2.png",
     title: "Вишня/миндаль",
     subTitle: "Конфи из вишни на белом шоколаде Zephyr",
@@ -14,6 +16,7 @@ export const Data = [
     price: { first: 1000, second: 2000 },
   },
   {
+    id: 3,
     image: "/bodyCandyImage/3.png",
     title: "Апельсин/Апероль Шприц",
     subTitle: "Цитрусовый кремовый ганаш с добавлением цедры апельсина",
@@ -21,6 +24,7 @@ export const Data = [
     price: { first: 1000, second: 2000 },
   },
   {
+    id: 4,
     image: "/bodyCandyImage/4.png",
     title: "Лимонная мечта",
     subTitle: "Нежнейший лимонный ганаш",
@@ -28,6 +32,7 @@ export const Data = [
     price: { first: 1000, second: 2000 },
   },
   {
+    id: 5,
     image: "/bodyCandyImage/5.png",
     title: "Мятный бриз",
     subTitle: "Лаймовый кремовый ганаш с добавлением мяты",
@@ -35,6 +40,7 @@ export const Data = [
     price: { first: 1000, second: 2000 },
   },
   {
+    id: 6,
     image: "/bodyCandyImage/6.png",
     title: "Трюфельная",
     subTitle: "Кремовый ганаш на основе темного шоколада Callebaut 54.5%",

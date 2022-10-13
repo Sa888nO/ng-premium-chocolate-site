@@ -26,7 +26,7 @@ export const Data = [
   { id: 7, image: img7, title: "Цветы" },
   { id: 8, image: img8, title: "Шоколад с печатью" },
   { id: 9, image: img9, title: "Месяца" },
-  { id: 10, image: img10, title: "Трюфели" },
+  { id: 10, image: img10, title: "Трюфели", truffle: true },
   { id: 11, image: img11, title: "Машинки" },
   { id: 12, image: img12, title: "Cердца" },
   { id: 13, image: img13, title: "Gold" },

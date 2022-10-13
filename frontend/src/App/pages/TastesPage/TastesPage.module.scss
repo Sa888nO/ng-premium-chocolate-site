@@ -7,24 +7,18 @@
   padding: 30px 0;
   gap: 50px;
   select {
+    text-overflow: ellipsis;
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
-    border: none;
-    display: inline;
-    width: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px 7px;
     -moz-appearance: none;
     -webkit-appearance: none;
     border: none;
     position: relative;
     outline: none;
-  }
-  option {
-    :hover {
-      background-color: rebeccapurple;
-    }
-    border-radius: 5px;
-    border: none !important;
   }
 }
 .img {
@@ -49,7 +43,7 @@
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   &__price {
     display: flex;
     gap: 15px;
@@ -59,6 +53,7 @@
   }
   &__select {
     display: flex;
+    align-items: center;
     gap: 15px;
   }
 }

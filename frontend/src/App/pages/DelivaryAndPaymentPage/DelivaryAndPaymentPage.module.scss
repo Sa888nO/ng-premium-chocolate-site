@@ -1,4 +1,5 @@
 @import "@styles/settings.scss";
+
 .content {
   padding: 30px 15px;
   display: flex;
@@ -8,50 +9,31 @@
   max-width: 1100px;
   margin: 0 auto;
   @include goldText;
-  .title {
-    font-size: 35px;
-    font-weight: bold;
-  }
-  .ul {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 20px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .title-info {
-    max-width: 800px;
-    text-align: center;
-    font-size: 25px;
-  }
-  .cpec-info {
+
+  .special-info {
     text-align: center;
     margin-top: 50px;
     font-size: 20px;
   }
-  .info-block {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .font {
-    box-shadow: none;
-    max-width: 800px;
-    @include goldText;
-  }
-  .font2 {
-    font-weight: bold;
-    font-size: 22px;
-    @include goldText;
-  }
-  .font3 {
-    font-size: 18px;
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
+}
+
+.accordion-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.delivery-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
 }

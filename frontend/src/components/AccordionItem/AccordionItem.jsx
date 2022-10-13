@@ -19,7 +19,7 @@ const AccordionItem = ({ title, content }) => {
         <Typography className={styles["title"]}>{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography className={styles["content"]}>
+        <Typography className={styles["content"]} component={"div"}>
           <React.Fragment>{content}</React.Fragment>
         </Typography>
       </AccordionDetails>

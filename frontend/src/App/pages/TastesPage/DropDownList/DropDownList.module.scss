@@ -1,0 +1,67 @@
+@import "@styles/settings.scss";
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 250px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  cursor: pointer;
+}
+.wrap-count {
+}
+.multi-down {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  @include goldText;
+
+  height: 70px;
+  mix-blend-mode: normal;
+  border-radius: 7px;
+
+  width: 100%;
+
+  max-width: 250px;
+  font-size: 15px;
+
+  white-space: wrap;
+}
+.multi-down-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.options {
+  overflow: hidden;
+  position: absolute;
+  border-radius: 7px;
+  top: 75px;
+  outline: none;
+  z-index: 1;
+}
+.options-count {
+  top: 30px;
+}
+.option {
+  padding: 0 5px;
+  border: 1px solid rgb(39, 39, 38);
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  @include goldText;
+}
+.option-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.black-wrap {
+  background-color: black !important;
+}

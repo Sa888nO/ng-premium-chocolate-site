@@ -11,6 +11,7 @@ import ShopItems from "./../../../store/ShopItems/ShopItems";
 import { BodyCandyItem } from "./components";
 import BodyCandy from "./components/BodyCandy";
 import Truffles from "./components/Truffles";
+import DropDownList from "./DropDownList";
 import styles from "./TastesPage.module.scss";
 
 const price = {
@@ -24,15 +25,14 @@ const price = {
 const TastesPage = () => {
   const { id } = useParams();
   let currentItem = ShopItems.getItems[id - 1];
+
   let data = currentItem.truffle
     ? TruffleFlavors.getFlavors
     : CandyFlavors.getFlavors;
+
   const [countCandy, setCountCandy] = useState(9);
   const [idCurrentTaste, setIdCurrentTaste] = useState(data[0].id);
-  // eslint-disable-next-line no-console
-  console.log(idCurrentTaste);
-  // eslint-disable-next-line no-console
-  console.log(data);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -45,7 +45,18 @@ const TastesPage = () => {
         <div className={styles["price-block"]}>
           <div className={styles["price-block__select"]}>
             Количество:
-            <select
+            <DropDownList
+              options={[
+                { title: 9 },
+                { title: 12 },
+                { title: 16 },
+                { title: 24 },
+                { title: 30 },
+              ]}
+              update={(value) => setCountCandy(value)}
+              typeCount={true}
+            />
+            {/* <select
               className={styles.select1}
               onChange={(e) => setCountCandy(e.target.value)}
             >
@@ -54,23 +65,20 @@ const TastesPage = () => {
               <option>16</option>
               <option>24</option>
               <option>30</option>
-            </select>
+            </select> */}
           </div>
           <div className={styles["price-block__select"]}>
             Вкус:
-            <select
-              onChange={(e) => {
-                data.forEach((item) => {
-                  if (item.title == e.target.value) {
-                    setIdCurrentTaste(item.id);
-                  }
-                });
+            <DropDownList
+              options={data}
+              update={(value) => {
+                setIdCurrentTaste(
+                  data.filter((item) => {
+                    return item.title === value;
+                  })[0].id - 1
+                );
               }}
-            >
-              {data.map((candy) => (
-                <option key={candy.id}>{candy.title}</option>
-              ))}
-            </select>
+            />
           </div>
           <div className={styles["price-block__price"]}>
             Цена: <span>{price[`number${countCandy}`]}</span>

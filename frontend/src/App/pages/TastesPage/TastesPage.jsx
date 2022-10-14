@@ -4,7 +4,7 @@ import CandyFlavors from "@store/CandyFlavors";
 import TruffleFlavors from "@store/TruffleFlavors";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import ShopPageItem from "../ShopPage/ShopPageItem";
 import ShopItems from "./../../../store/ShopItems/ShopItems";
@@ -39,39 +39,43 @@ const TastesPage = () => {
 
   return (
     <div className={classNames(styles.content)}>
-      <img className={styles["img"]} src={currentItem.image} alt="candy" />
-      <div className={styles["core-block"]}>
-        <div className={styles["core-block__title"]}>{currentItem.title}</div>
-        <div className={styles["price-block"]}>
-          <div className={styles["price-block__select"]}>
-            Количество:
-            <DropDownList
-              options={[
-                { title: 9 },
-                { title: 12 },
-                { title: 16 },
-                { title: 24 },
-                { title: 30 },
-              ]}
-              update={(value) => setCountCandy(value)}
-              typeCount={true}
-            />
-          </div>
-          <div className={styles["price-block__select"]}>
-            Вкус:
-            <DropDownList
-              options={data}
-              update={(value) => {
-                setIdCurrentTaste(
-                  data.filter((item) => {
-                    return item.title === value;
-                  })[0].id - 1
-                );
-              }}
-            />
-          </div>
-          <div className={styles["price-block__price"]}>
-            Цена: <span>{price[`number${countCandy}`]} р</span>
+      <div className={styles["main-content"]}>
+        <div>
+          <img className={styles["img"]} src={currentItem.image} alt="candy" />
+        </div>
+        <div className={styles["core-block"]}>
+          <div className={styles["core-block__title"]}>{currentItem.title}</div>
+          <div className={styles["price-block"]}>
+            <div className={styles["price-block__select"]}>
+              Количество:
+              <DropDownList
+                options={[
+                  { title: 9 },
+                  { title: 12 },
+                  { title: 16 },
+                  { title: 24 },
+                  { title: 30 },
+                ]}
+                update={(value) => setCountCandy(value)}
+                typeCount={true}
+              />
+            </div>
+            <div className={styles["price-block__select"]}>
+              Вкус:
+              <DropDownList
+                options={data}
+                update={(value) => {
+                  setIdCurrentTaste(
+                    data.filter((item) => {
+                      return item.title === value;
+                    })[0].id - 1
+                  );
+                }}
+              />
+            </div>
+            <div className={styles["price-block__price"]}>
+              Цена: <span>{price[`number${countCandy}`]} р</span>
+            </div>
           </div>
         </div>
       </div>

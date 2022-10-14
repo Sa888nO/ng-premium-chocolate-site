@@ -1,3 +1,4 @@
+import AccordionItem from "@components/AccordionItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -35,57 +36,39 @@ const AboutCandyPage = () => {
         <img className={styles.img} src={picture} alt="background" />
       </div>
       <div className={styles["info-block"]}>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Белый шоколад</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
+        <AccordionItem
+          title="Белый шоколад"
+          content={
+            <div className={styles["accordion-content"]}>
               сахар, масло какао, сухое цельное молоко, эмульгатор – соевый
               лецитин, натуральный ароматизатор – ваниль, содержание
               какао-продуктов мин. 32%
               <img className={styles.img} src={choco1} alt="background" />
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Молочный шоколад</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
+            </div>
+          }
+        />
+        <AccordionItem
+          title="Молочный шоколад"
+          content={
+            <div className={styles["accordion-content"]}>
               сахар, масло какао, сухое цельное молоко, какао тертое, эмульгатор
               – соевый лецитин, натуральный ароматизатор – ваниль, содержание
               какао-продуктов мин. 33,6%
               <img className={styles.img} src={choco2} alt="background" />
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className={styles.font}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon color="warning" />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={styles.font2}>Темный шоколад</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={styles.font3}>
+            </div>
+          }
+        />
+        <AccordionItem
+          title="Темный шоколад"
+          content={
+            <div className={styles["accordion-content"]}>
               какао тертое, сахар, масло какао, эмульгатор – соевый лецитин,
               натуральный ароматизатор – ваниль, содержание какао-продуктов мин.
               54,5%
               <img className={styles.img} src={choco3} alt="background" />
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+            </div>
+          }
+        />
       </div>
       <div className={classNames(styles.title, styles.mt)}>Состав</div>
       <div className={styles["text-info-ing"]}>

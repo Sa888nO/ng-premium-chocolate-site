@@ -40,22 +40,10 @@
     flex-direction: column;
     gap: 10px;
   }
-  .font {
-    box-shadow: none;
-    max-width: 800px;
-    @include goldText;
-    background-color: inherit;
-  }
-  .font2 {
-    font-weight: bold;
-    font-size: 22px;
-    @include goldText;
-  }
-  .font3 {
+
+  .accordion-content {
     display: flex;
-    font-size: 18px;
     gap: 30px;
-    @include goldText;
     text-align: justify;
     .img {
       width: 150px;
@@ -103,7 +91,7 @@
       margin: 0 auto;
       width: 90%;
     }
-    .font3 {
+    .accordion-content {
       gap: 20px;
       flex-direction: column;
       .img {

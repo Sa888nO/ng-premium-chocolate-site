@@ -2,10 +2,18 @@
 .content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px 0;
   gap: 50px;
+
+  .main-content {
+    display: flex;
+    gap: 50px;
+    padding-left: 60px;
+    justify-content: center;
+  }
   select {
     text-overflow: ellipsis;
     font-size: 20px;
@@ -22,6 +30,7 @@
   }
 }
 .img {
+  border-radius: 10px;
   flex: none;
   width: 350px;
   height: 350px;
@@ -64,13 +73,20 @@
   .content {
     gap: 25px;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    .main-content {
+      gap: 30px;
+      padding: 0 5px;
+      padding-left: 0;
+      flex-direction: column;
+    }
   }
   .img {
-    margin: 0 auto;
   }
   .core-block {
     padding-top: 0;
-    width: 350px;
+    width: 330px;
     margin: 0 auto;
     &__title {
       text-align: center;

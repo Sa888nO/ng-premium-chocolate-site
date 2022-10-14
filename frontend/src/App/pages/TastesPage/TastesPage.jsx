@@ -56,16 +56,6 @@ const TastesPage = () => {
               update={(value) => setCountCandy(value)}
               typeCount={true}
             />
-            {/* <select
-              className={styles.select1}
-              onChange={(e) => setCountCandy(e.target.value)}
-            >
-              <option>9</option>
-              <option>12</option>
-              <option>16</option>
-              <option>24</option>
-              <option>30</option>
-            </select> */}
           </div>
           <div className={styles["price-block__select"]}>
             Вкус:
@@ -81,7 +71,7 @@ const TastesPage = () => {
             />
           </div>
           <div className={styles["price-block__price"]}>
-            Цена: <span>{price[`number${countCandy}`]}</span>
+            Цена: <span>{price[`number${countCandy}`]} р</span>
           </div>
         </div>
       </div>

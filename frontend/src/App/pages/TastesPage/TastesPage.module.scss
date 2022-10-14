@@ -45,9 +45,11 @@
   flex-direction: column;
   gap: 40px;
   &__price {
+    align-items: center;
     display: flex;
     gap: 15px;
     span {
+      font-size: 25px;
       font-weight: bold;
     }
   }

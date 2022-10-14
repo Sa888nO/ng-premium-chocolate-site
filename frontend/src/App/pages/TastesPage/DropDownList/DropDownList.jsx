@@ -36,8 +36,8 @@ const DropDownList = ({ options, update, typeCount = false }) => {
                   setValue(child.title);
 
                   update(child.title);
+                  setOpen(false);
                 }}
-                key={child.id}
                 className={classNames(styles.option, {
                   [styles["option-count"]]: typeCount,
                 })}

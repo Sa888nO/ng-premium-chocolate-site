@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import LinkImg from "./../LinkImg";
+import img1 from "./../LinkImg/2.jpg";
 import styles from "./Catalog.module.scss";
 
 const Catalog = () => {
@@ -7,7 +9,10 @@ const Catalog = () => {
     <div className={styles.catalog}>
       Каталог
       <div className={styles["catalog_items-block"]}>
-        <Link className={styles.a} to={"/shop"}>
+        <LinkImg title={"Корпусные конфеты"} link="/shop" image={img1} />
+        <LinkImg title={"Корпусные конфеты"} link="/shop" image={img1} />
+        <LinkImg title={"Корпусные конфеты"} link="/shop" image={img1} />
+        {/* <Link className={styles.a} to={"/shop"}>
           <div className={styles.a1}>
             <div className={styles.card}>
               <div className={styles["catalog_text"]}>Корпусные конфеты</div>
@@ -46,7 +51,7 @@ const Catalog = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -114,14 +114,14 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
           >
             Доставка и оплата
           </Link>
-          <Link
+          {/* <Link
             to={"/about-author"}
             className={classNames({
               [styles.active]: location.pathname === "/about-author",
             })}
           >
             Об авторе
-          </Link>
+          </Link> */}
           <Link
             to={"/about-candy"}
             className={classNames({

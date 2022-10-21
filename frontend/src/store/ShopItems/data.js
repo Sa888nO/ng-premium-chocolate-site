@@ -28,11 +28,8 @@ export const Data = [
   { id: 14, image: img14, title: "Авангард" },
   { id: 10, image: img10, title: "Трюфели", truffle: true },
   { id: 11, image: img11, title: "Машинки" },
-  // { id: 12, image: img12, title: "Cердца" },
   { id: 13, image: img13, title: "Gold" },
   { id: 7, image: img7, title: "Цветы" },
   { id: 17, image: img17, title: "Love story 2" },
   { id: 15, image: img15, title: "Love" },
-
-  // { id: 9, image: img9, title: "Месяца" },
 ];

@@ -8,12 +8,19 @@ const ShopPage = () => {
   return (
     <div className={styles.content}>
       {ShopItems.getItems.map((item, key) => (
-        <ShopPageItem
-          title={item.title}
-          id={item.id}
-          image={item.image}
-          key={key}
-        />
+        <div
+          onClick={() => {
+            // eslint-disable-next-line no-console
+            console.log(item);
+          }}
+        >
+          <ShopPageItem
+            title={item.title}
+            id={item.id}
+            image={item.image}
+            key={key}
+          />
+        </div>
       ))}
     </div>
   );

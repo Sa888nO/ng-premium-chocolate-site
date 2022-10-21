@@ -4,7 +4,7 @@ import CandyFlavors from "@store/CandyFlavors";
 import TruffleFlavors from "@store/TruffleFlavors";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import ShopPageItem from "../ShopPage/ShopPageItem";
 import ShopItems from "./../../../store/ShopItems/ShopItems";
@@ -24,7 +24,7 @@ const price = {
 
 const TastesPage = () => {
   const { id } = useParams();
-  let currentItem = ShopItems.getItems[id - 1];
+  let currentItem = ShopItems.getItems.filter((item) => item.id === +id)[0];
 
   let data = currentItem.truffle
     ? TruffleFlavors.getFlavors

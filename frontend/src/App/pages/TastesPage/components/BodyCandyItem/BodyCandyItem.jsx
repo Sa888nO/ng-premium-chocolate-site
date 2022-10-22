@@ -10,9 +10,10 @@ const BodyCandyItem = ({ Title, subTitle, image, info, price }) => {
       ) : (
         <></>
       )}
-      <div className={styles["candy-card_title"]}>{Title}</div>
-      <div className={styles["candy-card_sub-title"]}>{subTitle}</div>
-      <div className={styles["candy-card_info"]}>Состав: {info}</div>
+      <div className={styles["candy-card_info-block"]}>
+        <div className={styles["candy-card_title"]}>{Title}</div>
+        <div className={styles["candy-card_info"]}>Состав: {info}</div>
+      </div>
     </div>
   );
 };

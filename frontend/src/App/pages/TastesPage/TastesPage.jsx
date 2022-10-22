@@ -6,11 +6,8 @@ import classNames from "classnames";
 import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 
-import ShopPageItem from "../ShopPage/ShopPageItem";
 import ShopItems from "./../../../store/ShopItems/ShopItems";
 import { BodyCandyItem } from "./components";
-import BodyCandy from "./components/BodyCandy";
-import Truffles from "./components/Truffles";
 import DropDownList from "./DropDownList";
 import DropDownListTastes from "./DropDownListTastes";
 import styles from "./TastesPage.module.scss";
@@ -32,6 +29,7 @@ const TastesPage = () => {
     : CandyFlavors.getFlavors;
 
   const [countCandy, setCountCandy] = useState(9);
+  const [currentTastes, updateTastes] = useState([]);
   const [idCurrentTaste, setIdCurrentTaste] = useState(data[0].id);
 
   useEffect(() => {
@@ -62,17 +60,28 @@ const TastesPage = () => {
               />
             </div>
             <div className={styles["price-block__select"]}>
-              Вкус:
-              <DropDownListTastes
-                options={data}
-                update={(value) => {
-                  setIdCurrentTaste(
-                    data.filter((item) => {
-                      return item.title === value;
-                    })[0].id - 1
-                  );
-                }}
-              />
+              <div className={styles.tastes}>
+                <span>Вкусы</span>
+                {currentTastes.map((item, index) => (
+                  <div>
+                    {index + 1}) {item}
+                  </div>
+                ))}
+
+                <DropDownListTastes
+                  options={data}
+                  update={(value) => {
+                    if (currentTastes.includes(value)) {
+                      updateTastes(
+                        currentTastes.filter((item) => item !== value)
+                      );
+                    } else {
+                      updateTastes([...currentTastes, value]);
+                    }
+                  }}
+                  currentTastes={currentTastes}
+                />
+              </div>
             </div>
             <div className={styles["price-block__price"]}>
               Цена: <span>{price[`number${countCandy}`]} р</span>
@@ -80,13 +89,17 @@ const TastesPage = () => {
           </div>
         </div>
       </div>
-      <BodyCandyItem
-        Title={data[idCurrentTaste].title}
-        subTitle={data[idCurrentTaste].subTitle}
-        image={data[idCurrentTaste].image}
-        info={data[idCurrentTaste].info}
-        price={data[idCurrentTaste].price}
-      />
+      {data
+        .filter((item) => currentTastes.includes(item.title))
+        .map((item) => (
+          <BodyCandyItem
+            Title={item.title}
+            subTitle={item.subTitle}
+            image={item.image}
+            info={item.info}
+            price={item.price}
+          />
+        ))}
     </div>
   );
 };

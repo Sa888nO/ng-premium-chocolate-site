@@ -4,9 +4,13 @@ import classNames from "classnames";
 
 import styles from "./DropDownListTastes.module.scss";
 
-const DropDownListTastes = ({ options, update, typeCount = false }) => {
+const DropDownListTastes = ({
+  options,
+  update,
+  typeCount = false,
+  currentTastes,
+}) => {
   const [isOpen, setOpen] = useState(false);
-  const [currentValue, setValue] = useState(options[0].title);
   const handleOpen = () => (isOpen ? setOpen(false) : setOpen(true));
 
   return (
@@ -21,7 +25,7 @@ const DropDownListTastes = ({ options, update, typeCount = false }) => {
         })}
         onClick={handleOpen}
       >
-        {currentValue}
+        Добавить вкус +
       </button>
       <div
         className={classNames(styles.options, {
@@ -30,13 +34,14 @@ const DropDownListTastes = ({ options, update, typeCount = false }) => {
       >
         {isOpen &&
           options.map((child, index) => (
-            <div className={styles["black-wrap"]}>
+            <div
+              className={classNames(styles["black-wrap"], {
+                [styles.active]: currentTastes.includes(child.title),
+              })}
+            >
               <div
                 onClick={() => {
-                  setValue(child.title);
-
                   update(child.title);
-                  setOpen(false);
                 }}
                 className={classNames(styles.option, {
                   [styles["option-count"]]: typeCount,

@@ -1,13 +1,11 @@
 .candy-card {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  padding: 20px 20px 30px 20px;
+  padding: 5px 20px 20px 20px;
   width: 80%;
   max-width: 800px;
+  gap: 10px;
   margin: 0 auto;
-  gap: 20px;
-
   border-radius: 20px;
   background: radial-gradient(
       ellipse farthest-corner at right bottom,
@@ -26,21 +24,22 @@
       #5d4a1f 100%
     );
   color: black;
+  &_info-block {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
   &_img {
+    flex: none;
     display: flex;
     justify-content: center;
-    width: 100%;
+    // width: 100%;
   }
   &_title {
     text-align: center;
     font-size: 26px;
     font-weight: bold;
-  }
-  &_sub-title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0.8;
   }
   &_info {
     text-align: justify;
@@ -48,9 +47,13 @@
     font-weight: 500;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .candy-card {
+    flex-direction: column;
     width: 80%;
     background-color: aqua;
+    &_info-block {
+      gap: 30px;
+    }
   }
 }

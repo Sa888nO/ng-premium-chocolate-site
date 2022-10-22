@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 270px;
+  width: 330px;
   flex-wrap: wrap;
   font-size: 15px;
   cursor: pointer;
@@ -18,10 +18,10 @@
   cursor: pointer;
   @include goldText;
 
-  height: 70px;
+  padding: 10px;
   mix-blend-mode: normal;
   border-radius: 7px;
-  width: 270px;
+
   font-size: 15px;
   white-space: wrap;
 }
@@ -34,10 +34,11 @@
 }
 
 .options {
-  overflow: hidden;
   position: absolute;
+  max-height: 200px;
+  overflow-x: scroll;
   border-radius: 7px;
-  top: 75px;
+  top: 45px;
   width: 100%;
   outline: none;
   z-index: 1;
@@ -64,4 +65,17 @@
 .black-wrap {
   border-radius: 10px;
   background-color: black !important;
+}
+
+.active {
+  background-color: rgb(34, 34, 32) !important;
+}
+
+@keyframes navVisible {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 250px;
+  }
 }

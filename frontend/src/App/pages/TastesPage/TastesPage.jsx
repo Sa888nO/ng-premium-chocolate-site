@@ -12,6 +12,7 @@ import { BodyCandyItem } from "./components";
 import BodyCandy from "./components/BodyCandy";
 import Truffles from "./components/Truffles";
 import DropDownList from "./DropDownList";
+import DropDownListTastes from "./DropDownListTastes";
 import styles from "./TastesPage.module.scss";
 
 const price = {
@@ -62,7 +63,7 @@ const TastesPage = () => {
             </div>
             <div className={styles["price-block__select"]}>
               Вкус:
-              <DropDownList
+              <DropDownListTastes
                 options={data}
                 update={(value) => {
                   setIdCurrentTaste(

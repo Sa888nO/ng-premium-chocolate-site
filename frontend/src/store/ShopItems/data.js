@@ -1,7 +1,6 @@
 import img1 from "@assets/shopItemImages/1.jpg";
 import img10 from "@assets/shopItemImages/10.jpg";
 import img11 from "@assets/shopItemImages/11.jpg";
-import img12 from "@assets/shopItemImages/12.jpg";
 import img13 from "@assets/shopItemImages/13.jpg";
 import img14 from "@assets/shopItemImages/14.jpg";
 import img15 from "@assets/shopItemImages/15.jpeg";
@@ -14,7 +13,6 @@ import img5 from "@assets/shopItemImages/5.jpg";
 import img6 from "@assets/shopItemImages/6.jpeg";
 import img7 from "@assets/shopItemImages/7.jpeg";
 import img8 from "@assets/shopItemImages/8.jpeg";
-import img9 from "@assets/shopItemImages/9.jpg";
 
 export const Data = [
   { id: 1, image: img1, title: "Королевский" },

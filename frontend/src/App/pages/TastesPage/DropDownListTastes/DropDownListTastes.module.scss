@@ -17,11 +17,12 @@
   text-align: center;
   cursor: pointer;
   @include goldText;
+
   height: 70px;
   mix-blend-mode: normal;
   border-radius: 7px;
   width: 270px;
-  font-size: 25px;
+  font-size: 15px;
   white-space: wrap;
 }
 .multi-down-count {
@@ -46,7 +47,6 @@
   width: 30px;
 }
 .option {
-  font-size: 20px;
   border: 1px solid rgb(39, 39, 38);
   text-align: center;
   margin-top: 5px;

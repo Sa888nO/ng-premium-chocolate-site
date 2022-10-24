@@ -42,6 +42,7 @@ const DropDownListTastes = ({
               <div
                 onClick={() => {
                   update(child.title);
+                  setOpen(false);
                 }}
                 className={classNames(styles.option, {
                   [styles["option-count"]]: typeCount,

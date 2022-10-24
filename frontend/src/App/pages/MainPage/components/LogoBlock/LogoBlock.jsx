@@ -27,7 +27,7 @@ const LogoBlock = () => {
             styles["logo-block_links-block"]
           )}
         >
-          <Link className={styles.link1} to={"/shop"}>
+          <Link className={styles.link1} to={"/shop/1"}>
             Каталог
           </Link>
           <Link className={styles.link2} to={"/about-candy"}>

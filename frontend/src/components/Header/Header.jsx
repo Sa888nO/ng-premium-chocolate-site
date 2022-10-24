@@ -86,13 +86,13 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
               </div>
             </Link>
           </h1>
-          <span>hello@ng.com</span>
+          <span>gng0509@mail.ru</span>
         </div>
         <div className={classNames(styles.block_link)}>
           <Link
-            to={"/shop"}
+            to={"/shop/1"}
             className={classNames({
-              [styles.active]: location.pathname === "/shop",
+              [styles.active]: location.pathname === "/shop/1",
             })}
           >
             Каталог

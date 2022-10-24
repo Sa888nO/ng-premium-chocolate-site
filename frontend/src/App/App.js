@@ -22,7 +22,9 @@ function App() {
 
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/shop">
+              <Route path=":id" element={<ShopPage />} />
+            </Route>
             <Route path="/tastes">
               <Route path=":id" element={<TastesPage />} />
             </Route>

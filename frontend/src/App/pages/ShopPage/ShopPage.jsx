@@ -1,19 +1,25 @@
+import { useState } from "react";
+
 import ShopItems from "@store/ShopItems/ShopItems";
 import { observer } from "mobx-react-lite";
+import { useLocation, useParams } from "react-router-dom";
 
 import styles from "./ShopPage.module.scss";
 import ShopPageItem from "./ShopPageItem";
 
 const ShopPage = () => {
+  const location = useLocation();
+  // const [sortType, changeSortType] = useState(id);
+  let items = [];
+  if (location.pathname === "/shop/2") {
+    items = ShopItems.getItems.filter((item) => !item.truffle);
+  } else if (location.pathname === "/shop/3") {
+    items = ShopItems.getItems.filter((item) => item.truffle);
+  } else items = ShopItems.getItems;
   return (
     <div className={styles.content}>
-      {ShopItems.getItems.map((item, key) => (
-        <div
-          onClick={() => {
-            // eslint-disable-next-line no-console
-            console.log(item);
-          }}
-        >
+      {items.map((item, key) => (
+        <div>
           <ShopPageItem
             title={item.title}
             id={item.id}

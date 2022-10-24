@@ -4,7 +4,7 @@ import CandyFlavors from "@store/CandyFlavors";
 import TruffleFlavors from "@store/TruffleFlavors";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import ShopItems from "./../../../store/ShopItems/ShopItems";
 import { BodyCandyItem } from "./components";
@@ -37,7 +37,11 @@ const TastesPage = () => {
   }, []);
 
   return (
-    <div className={classNames(styles.content)}>
+    <div
+      className={classNames(styles.content, {
+        [styles["no-current-tastes"]]: currentTastes.length < 2,
+      })}
+    >
       <div className={styles["main-content"]}>
         <div>
           <img className={styles["img"]} src={currentItem.image} alt="candy" />
@@ -62,9 +66,19 @@ const TastesPage = () => {
             <div className={styles["price-block__select"]}>
               <div className={styles.tastes}>
                 <span>Вкусы</span>
+
                 {currentTastes.map((item, index) => (
-                  <div>
+                  <div className={styles["tastes_block"]}>
                     {index + 1}) {item}
+                    <button
+                      onClick={() => {
+                        updateTastes(
+                          currentTastes.filter((taste) => taste !== item)
+                        );
+                      }}
+                    >
+                      x
+                    </button>
                   </div>
                 ))}
 

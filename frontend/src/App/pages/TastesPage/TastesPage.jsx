@@ -4,7 +4,7 @@ import CandyFlavors from "@store/CandyFlavors";
 import TruffleFlavors from "@store/TruffleFlavors";
 import classNames from "classnames";
 import { observer } from "mobx-react-lite";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import ShopItems from "./../../../store/ShopItems/ShopItems";
 import { BodyCandyItem } from "./components";
@@ -89,7 +89,19 @@ const TastesPage = () => {
                         );
                       }}
                     >
-                      x
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
+                          fill="red"
+                        ></path>
+                      </svg>
                     </button>
                   </div>
                 ))}

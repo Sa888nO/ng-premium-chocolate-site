@@ -12,12 +12,19 @@ import DropDownList from "./DropDownList";
 import DropDownListTastes from "./DropDownListTastes";
 import styles from "./TastesPage.module.scss";
 
-const price = {
+const price1 = {
   number9: "900",
   number12: "1200",
   number16: "1600",
   number24: "2400",
   number30: "3000",
+};
+const price2 = {
+  number9: "1000",
+  number12: "1300",
+  number16: "1700",
+  number24: "2500",
+  number30: "3100",
 };
 
 const TastesPage = () => {
@@ -30,8 +37,13 @@ const TastesPage = () => {
 
   const [countCandy, setCountCandy] = useState(9);
   const [currentTastes, updateTastes] = useState([]);
-  const [idCurrentTaste, setIdCurrentTaste] = useState(data[0].id);
 
+  let price =
+    currentItem.price === 1
+      ? price1
+      : currentItem.price === 2
+      ? price2
+      : price1;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

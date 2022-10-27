@@ -9,6 +9,7 @@ import styles from "./Header.module.scss";
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const location = useLocation();
+
   return (
     <header>
       <div className={classNames(styles["button-block"])}>
@@ -86,7 +87,9 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
               </div>
             </Link>
           </h1>
-          <span>gng0509@mail.ru</span>
+          <span>
+            <a href="mailto:NG_choco@mail.ru">NG_choco@mail.ru</a>
+          </span>
         </div>
         <div className={classNames(styles.block_link)}>
           <Link
@@ -114,14 +117,6 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
           >
             Доставка и оплата
           </Link>
-          {/* <Link
-            to={"/about-author"}
-            className={classNames({
-              [styles.active]: location.pathname === "/about-author",
-            })}
-          >
-            Об авторе
-          </Link> */}
           <Link
             to={"/about-candy"}
             className={classNames({
@@ -149,7 +144,9 @@ m208 -384 c-16 -198 -182 -318 -395 -288 -74 11 -83 16 -83 43 0 17 4 19 28
         </div>
         <div className={classNames(styles["hidden-block"])}>
           <SocialLinksBlock type="header" />
-          <span>hello@ng.com</span>
+          <span>
+            <a href="mailto:NG_choco@mail.ru">NG_choco@mail.ru</a>
+          </span>
         </div>
       </nav>
     </header>

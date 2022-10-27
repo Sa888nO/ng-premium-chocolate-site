@@ -22,23 +22,6 @@ const DelivaryAndPaymentPage = () => {
           title="Доставка по России"
           content="Осуществляется транспортной компанией СДЭК до адреса или до пункта выдачи в вашем городе."
         />
-        <AccordionItem
-          title="Доставка по Москве"
-          content={
-            <React.Fragment>
-              <div className={styles["delivery-block"]}>
-                <p>
-                  Доставка продукции по Москве, осуществляется по средам с 19.00
-                  до 22.00 бесплатно.
-                </p>
-                <p>
-                  В остальные дни по индивидуальному согласованию. Стоимость
-                  доставки 500 руб
-                </p>
-              </div>
-            </React.Fragment>
-          }
-        />
       </div>
       <Title title="Способы оплаты" />
       <ul className={styles["payment-block"]}>

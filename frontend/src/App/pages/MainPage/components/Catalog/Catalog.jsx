@@ -1,7 +1,6 @@
-import img1 from "@assets/shopItemImages/8.jpeg";
-
 import LinkImg from "./../LinkImg";
-import img2 from "./../LinkImg/2.jpg";
+import img1 from "./1.jpeg";
+import img2 from "./2.jpg";
 import styles from "./Catalog.module.scss";
 
 const Catalog = () => {

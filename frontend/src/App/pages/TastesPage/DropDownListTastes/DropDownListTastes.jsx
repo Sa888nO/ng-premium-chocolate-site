@@ -9,6 +9,7 @@ const DropDownListTastes = ({
   update,
   typeCount = false,
   currentTastes,
+  CandyLimit,
 }) => {
   const [isOpen, setOpen] = useState(false);
   const handleOpen = () => (isOpen ? setOpen(false) : setOpen(true));
@@ -25,7 +26,7 @@ const DropDownListTastes = ({
         })}
         onClick={handleOpen}
       >
-        Добавить вкус +
+        Добавить вкус
       </button>
       <div
         className={classNames(styles.options, {

@@ -36,8 +36,17 @@ const TastesPage = () => {
     : CandyFlavors.getFlavors;
 
   const [countCandy, setCountCandy] = useState(9);
+  let maxTastes =
+    countCandy === 9
+      ? 3
+      : countCandy === 12 || countCandy === 16
+      ? 4
+      : countCandy > 23
+      ? 6
+      : 3;
   const [currentTastes, updateTastes] = useState([]);
-
+  // eslint-disable-next-line no-console
+  console.log(maxTastes);
   let price =
     currentItem.price === 1
       ? price1
@@ -71,7 +80,28 @@ const TastesPage = () => {
                   { title: 24 },
                   { title: 30 },
                 ]}
-                update={(value) => setCountCandy(value)}
+                update={(value) => {
+                  setCountCandy(value);
+                  maxTastes =
+                    value === 9
+                      ? 3
+                      : value === 12 || value === 16
+                      ? 4
+                      : value > 23
+                      ? 6
+                      : 3;
+                  // eslint-disable-next-line no-console
+                  console.log(maxTastes);
+                  let newCurrentTastes = [];
+                  for (let i = 0; i < maxTastes; i++) {
+                    if (currentTastes[i]) {
+                      newCurrentTastes.push(currentTastes[i]);
+                      // eslint-disable-next-line no-console
+                      console.log(newCurrentTastes);
+                    }
+                  }
+                  updateTastes(newCurrentTastes);
+                }}
                 typeCount={true}
               />
             </div>
@@ -105,20 +135,23 @@ const TastesPage = () => {
                     </button>
                   </div>
                 ))}
-
-                <DropDownListTastes
-                  options={data}
-                  update={(value) => {
-                    if (currentTastes.includes(value)) {
-                      updateTastes(
-                        currentTastes.filter((item) => item !== value)
-                      );
-                    } else {
-                      updateTastes([...currentTastes, value]);
-                    }
-                  }}
-                  currentTastes={currentTastes}
-                />
+                {!(maxTastes - currentTastes.length <= 0) ? (
+                  <DropDownListTastes
+                    options={data}
+                    update={(value) => {
+                      if (currentTastes.includes(value)) {
+                        updateTastes(
+                          currentTastes.filter((item) => item !== value)
+                        );
+                      } else {
+                        updateTastes([...currentTastes, value]);
+                      }
+                    }}
+                    currentTastes={currentTastes}
+                  />
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
             <div className={styles["price-block__price"]}>

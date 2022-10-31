@@ -9,7 +9,6 @@ const DropDownListTastes = ({
   update,
   typeCount = false,
   currentTastes,
-  CandyLimit,
 }) => {
   const [isOpen, setOpen] = useState(false);
   const handleOpen = () => (isOpen ? setOpen(false) : setOpen(true));

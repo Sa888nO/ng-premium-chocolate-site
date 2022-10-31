@@ -10,6 +10,7 @@ import ShopItems from "./../../../store/ShopItems/ShopItems";
 import { BodyCandyItem } from "./components";
 import DropDownList from "./DropDownList";
 import DropDownListTastes from "./DropDownListTastes";
+import TasteItem from "./TasteItem";
 import styles from "./TastesPage.module.scss";
 
 const price1 = {
@@ -30,7 +31,6 @@ const price2 = {
 const TastesPage = () => {
   const { id } = useParams();
   let currentItem = ShopItems.getItems.filter((item) => item.id === +id)[0];
-
   let data = currentItem.truffle
     ? TruffleFlavors.getFlavors
     : CandyFlavors.getFlavors;
@@ -45,14 +45,16 @@ const TastesPage = () => {
       ? 6
       : 3;
   const [currentTastes, updateTastes] = useState([]);
-  // eslint-disable-next-line no-console
-  console.log(maxTastes);
+  const [candyLimit, updateCandyLimit] = useState(countCandy);
+
   let price =
     currentItem.price === 1
       ? price1
       : currentItem.price === 2
       ? price2
       : price1;
+  // eslint-disable-next-line no-console
+  console.log(candyLimit);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -82,6 +84,7 @@ const TastesPage = () => {
                 ]}
                 update={(value) => {
                   setCountCandy(value);
+                  updateCandyLimit(value - currentTastes.length);
                   maxTastes =
                     value === 9
                       ? 3
@@ -90,14 +93,11 @@ const TastesPage = () => {
                       : value > 23
                       ? 6
                       : 3;
-                  // eslint-disable-next-line no-console
-                  console.log(maxTastes);
+
                   let newCurrentTastes = [];
                   for (let i = 0; i < maxTastes; i++) {
                     if (currentTastes[i]) {
                       newCurrentTastes.push(currentTastes[i]);
-                      // eslint-disable-next-line no-console
-                      console.log(newCurrentTastes);
                     }
                   }
                   updateTastes(newCurrentTastes);
@@ -110,30 +110,14 @@ const TastesPage = () => {
                 <span>Вкусы</span>
 
                 {currentTastes.map((item, index) => (
-                  <div className={styles["tastes_block"]}>
-                    {index + 1}) {item}
-                    <button
-                      onClick={() => {
-                        updateTastes(
-                          currentTastes.filter((taste) => taste !== item)
-                        );
-                      }}
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 16 16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
-                          fill="red"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
+                  <TasteItem
+                    item={item}
+                    index={index}
+                    updateTastes={updateTastes}
+                    currentTastes={currentTastes}
+                    CandyLimit={candyLimit}
+                    updateCandyLimit={updateCandyLimit}
+                  />
                 ))}
                 {!(maxTastes - currentTastes.length <= 0) ? (
                   <DropDownListTastes
@@ -148,6 +132,7 @@ const TastesPage = () => {
                       }
                     }}
                     currentTastes={currentTastes}
+                    CandyLimit={countCandy}
                   />
                 ) : (
                   <></>

@@ -5,7 +5,7 @@ import styles from "./CorporateOrders.module.scss";
 
 const CorporateOrders = () => {
   return (
-    <div className={classNames(styles.content)}>
+    <div className={classNames("page-container", styles.content)}>
       <div className={styles.title}>Корпоративным клиентам</div>
       <div className={styles.block}>
         <div className={styles["text-block"]}>

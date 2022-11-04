@@ -61,7 +61,7 @@ const TastesPage = () => {
 
   return (
     <div
-      className={classNames(styles.content, {
+      className={classNames("page-container", styles.content, {
         [styles["no-current-tastes"]]: currentTastes.length < 2,
       })}
     >

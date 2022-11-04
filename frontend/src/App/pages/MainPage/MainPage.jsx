@@ -6,7 +6,7 @@ import styles from "./MainPage.module.scss";
 
 const MainPage = () => {
   return (
-    <div className={classNames(styles.content)}>
+    <div className={classNames("page-container", styles.content)}>
       <LogoBlock />
       <Catalog />
     </div>

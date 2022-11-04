@@ -1,12 +1,9 @@
 @import "@styles/settings.scss";
 .content {
-  padding: 0px 15px 30px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  @include goldText;
+
   .mt {
     margin-top: 30px;
   }

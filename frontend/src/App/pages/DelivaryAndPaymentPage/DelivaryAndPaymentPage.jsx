@@ -2,12 +2,13 @@ import React from "react";
 
 import AccordionItem from "@components/AccordionItem";
 import Title from "@components/Title";
+import classNames from "classnames";
 
 import styles from "./DelivaryAndPaymentPage.module.scss";
 
 const DelivaryAndPaymentPage = () => {
   return (
-    <div className={styles.content}>
+    <div className={classNames("page-container", styles.content)}>
       <Title title="Доставка" />
       <div className={styles["accordion-block"]}>
         <AccordionItem

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import ShopItems from "@store/ShopItems/ShopItems";
+import classNames from "classnames";
 import { observer } from "mobx-react-lite";
 import { useLocation, useParams } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const ShopPage = () => {
     items = ShopItems.getItems.filter((item) => item.truffle);
   } else items = ShopItems.getItems;
   return (
-    <div className={styles.content}>
+    <div className={classNames("page-container", styles.content)}>
       {items.map((item, key) => (
         <div>
           <ShopPageItem

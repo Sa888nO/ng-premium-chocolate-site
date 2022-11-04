@@ -1,10 +1,11 @@
 import Title from "@components/Title";
+import classNames from "classnames";
 
 import styles from "./KeepingPage.module.scss";
 
 const KeepingPage = () => {
   return (
-    <div className={styles.content}>
+    <div className={classNames("page-container", styles.content)}>
       <Title title="Хранение Конфет" />
       <div className={styles["info-block"]}>
         <p>

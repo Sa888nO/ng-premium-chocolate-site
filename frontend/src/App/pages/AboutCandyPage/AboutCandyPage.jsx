@@ -14,7 +14,7 @@ import choco3 from "./choco3.jpg";
 
 const AboutCandyPage = () => {
   return (
-    <div className={styles.content}>
+    <div className={classNames("page-container", styles.content)}>
       <div className={styles.title}>Шоколад</div>
       <div className={styles["choko-block"]}>
         <div className={styles["text-block"]}>

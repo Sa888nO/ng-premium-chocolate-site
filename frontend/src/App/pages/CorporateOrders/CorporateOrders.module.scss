@@ -3,9 +3,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  max-width: 1100px;
-  margin: 0 auto;
-  @include goldText;
+
   .block {
     padding: 20px;
     margin-top: 15px;

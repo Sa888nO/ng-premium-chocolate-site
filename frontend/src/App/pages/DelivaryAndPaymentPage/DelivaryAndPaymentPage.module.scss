@@ -1,14 +1,10 @@
 @import "@styles/settings.scss";
 
 .content {
-  padding: 30px 15px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  @include goldText;
 
   .special-info {
     text-align: center;

@@ -1,22 +1,13 @@
 @import "@styles/settings.scss";
 
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
   max-width: 660px !important;
 
-  .special-info {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 20px;
-  }
   p {
     font-size: 20px;
     font-weight: bold;
   }
-  .body {
+  .information-block {
     display: flex;
     flex-direction: column;
     gap: 20px;

@@ -1,9 +1,5 @@
 import AccordionItem from "@components/AccordionItem";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+import Title from "@components/Title";
 import classNames from "classnames";
 
 import styles from "./AboutCandyPage.module.scss";
@@ -15,7 +11,8 @@ import choco3 from "./choco3.jpg";
 const AboutCandyPage = () => {
   return (
     <div className={classNames("page-container", styles.content)}>
-      <div className={styles.title}>Шоколад</div>
+      <Title title="Шоколад" className={styles.title} />
+
       <div className={styles["choko-block"]}>
         <div className={styles["text-block"]}>
           <div className={styles.text}>
@@ -70,7 +67,7 @@ const AboutCandyPage = () => {
           }
         />
       </div>
-      <div className={classNames(styles.title, styles.mt)}>Состав</div>
+      <Title title="Cостав" />
       <div className={styles["text-info-ing"]}>
         Шоколадные изделия в зависимости от их вида имеют в своем составе
         следующие ингредиенты

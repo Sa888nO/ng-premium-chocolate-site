@@ -1,3 +1,4 @@
+import Title from "@components/Title";
 import classNames from "classnames";
 
 import background from "./bg.jpg";
@@ -6,7 +7,8 @@ import styles from "./CorporateOrders.module.scss";
 const CorporateOrders = () => {
   return (
     <div className={classNames("page-container", styles.content)}>
-      <div className={styles.title}>Корпоративным клиентам</div>
+      <Title title="Корпоративным клиентам" />
+
       <div className={styles.block}>
         <div className={styles["text-block"]}>
           <div className={styles["text-block_text-item1"]}>

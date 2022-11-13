@@ -7,8 +7,8 @@ import whatsUp from "./WUP.png";
 const ContactsPage = () => {
   return (
     <div className={classNames("page-container", styles.content)}>
-      <div className={styles.body}>
-        <Title title={"Контакты"} />
+      <Title title={"Контакты"} />
+      <div className={styles["information-block"]}>
         <p>Контактный телефон: + 7 (929) 508-39-36</p>
         <p>
           Email: <a href="mailto:NG_choco@mail.ru">NG_choco@mail.ru</a>

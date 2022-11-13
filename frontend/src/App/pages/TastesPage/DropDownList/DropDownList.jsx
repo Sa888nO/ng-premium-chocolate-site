@@ -29,8 +29,8 @@ const DropDownList = ({ options, update, typeCount = false }) => {
         })}
       >
         {isOpen &&
-          options.map((child, index) => (
-            <div className={styles["black-wrap"]}>
+          options.map((child, key) => (
+            <div className={styles["black-wrap"]} key={key}>
               <div
                 onClick={() => {
                   setValue(child.title);

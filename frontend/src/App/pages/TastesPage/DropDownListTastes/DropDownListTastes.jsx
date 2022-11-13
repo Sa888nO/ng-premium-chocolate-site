@@ -33,8 +33,9 @@ const DropDownListTastes = ({
         })}
       >
         {isOpen &&
-          options.map((child, index) => (
+          options.map((child, key) => (
             <div
+              key={key}
               className={classNames(styles["black-wrap"], {
                 [styles.active]: currentTastes.includes(child.title),
               })}

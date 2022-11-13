@@ -53,8 +53,6 @@ const TastesPage = () => {
       : currentItem.price === 2
       ? price2
       : price1;
-  // eslint-disable-next-line no-console
-  console.log(candyLimit);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -109,8 +107,9 @@ const TastesPage = () => {
               <div className={styles.tastes}>
                 <span>Вкусы</span>
 
-                {currentTastes.map((item, index) => (
+                {currentTastes.map((item, index, key) => (
                   <TasteItem
+                    key={key}
                     item={item}
                     index={index}
                     updateTastes={updateTastes}
@@ -145,10 +144,12 @@ const TastesPage = () => {
           </div>
         </div>
       </div>
+
       {data
         .filter((item) => currentTastes.includes(item.title))
         .map((item) => (
           <BodyCandyItem
+            key={item.id}
             Title={item.title}
             subTitle={item.subTitle}
             image={item.image}

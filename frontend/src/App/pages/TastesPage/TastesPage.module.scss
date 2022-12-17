@@ -1,126 +1,134 @@
 @import "@styles/settings.scss";
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  .main-content {
     display: flex;
+    flex-direction: column;
     gap: 50px;
-    padding-left: 60px;
-    justify-content: center;
-  }
-  select {
-    text-overflow: ellipsis;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 5px 7px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    position: relative;
-    outline: none;
-  }
+
+    .main-content {
+        display: flex;
+        gap: 50px;
+        padding-left: 60px;
+        justify-content: center;
+    }
+    select {
+        text-overflow: ellipsis;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 5px 7px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
+        position: relative;
+        outline: none;
+    }
 }
 .no-current-tastes {
-  height: 860px;
+    height: 860px;
 }
 .img {
-  border-radius: 10px;
-  flex: none;
-  width: 350px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
+    border-radius: 10px;
+    flex: none;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
 }
 .core-block {
-  @include goldText;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+    @include goldText;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 
-  padding-top: 30px;
-  gap: 20px;
-  &__title {
-    font-size: 30px;
-    font-weight: bold;
-  }
+    padding-top: 30px;
+    gap: 20px;
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+    }
 }
 .price-block {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  &__price {
-    align-items: center;
+    font-size: 20px;
     display: flex;
-    gap: 15px;
-    span {
-      font-size: 25px;
-      font-weight: bold;
+    flex-direction: column;
+    gap: 30px;
+    &__price {
+        align-items: center;
+        display: flex;
+        gap: 15px;
+        span {
+            font-size: 25px;
+            font-weight: bold;
+        }
     }
-  }
-  &__select {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
+    &__select {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
 }
 .tastes {
-  width: 330px;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  span {
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-  }
-  &_block {
+    width: 330px;
+    gap: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    button {
-      cursor: pointer;
-      font-size: 30px;
-      border: 0;
-      color: red;
-      background-color: black;
+    flex-direction: column;
+    span {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
     }
-  }
+    &_block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            cursor: pointer;
+            font-size: 30px;
+            border: 0;
+            color: red;
+            background-color: black;
+        }
+    }
 }
 .back-link {
-  display: absolute;
+    display: absolute;
 }
 
 @media (max-width: 800px) {
-  .no-current-tastes {
-    min-height: 1200px;
-  }
-  .content {
-    gap: 25px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+    .no-current-tastes {
+        min-height: 1200px;
+    }
+    .content {
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
 
-    .main-content {
-      gap: 30px;
-      padding: 0 5px;
-      padding-left: 0;
-      flex-direction: column;
+        .main-content {
+            gap: 30px;
+            padding: 0 5px;
+            padding-left: 0;
+            flex-direction: column;
+        }
     }
-  }
-  .img {
-  }
-  .core-block {
-    padding-top: 0;
-    width: 330px;
+    .img {
+    }
+    .core-block {
+        padding-top: 0;
+        width: 330px;
+        margin: 0 auto;
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+.info {
+    max-width: 200px;
     margin: 0 auto;
-    &__title {
-      text-align: center;
-    }
-  }
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
 }
